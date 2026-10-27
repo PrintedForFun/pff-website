@@ -6,32 +6,316 @@
     <title>PrintedForFun — 3D Scanning, Reverse Engineering &amp; 3D Printing</title>
     <meta
       name="description"
-      content="PrintedForFun by Philipp Kreiser: 3D scanning, reverse engineering and 3D printing. Technical clarity. Creative energy."
+      content="PrintedForFun by Philipp Kreiser, Munich: 3D scanning from PCBs to cars and buildings, reverse engineering to STEP, scan workflow automation, 3D printing for rapid prototyping, Gaussian splatting and consulting."
     />
+    <link rel="canonical" href="https://printedforfun.com/" />
     <meta name="theme-color" content="#16242c" />
-    <link rel="icon" type="image/png" href="assets/logo.png" />
-    <link rel="apple-touch-icon" href="assets/logo.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icon-180.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="PrintedForFun" />
-    <meta property="og:description" content="3D Scanning · Reverse Engineering · 3D Printing" />
-    <meta property="og:image" content="assets/logo.png" />
+    <meta property="og:site_name" content="PrintedForFun" />
+    <meta property="og:url" content="https://printedforfun.com/" />
+    <meta property="og:title" content="PrintedForFun — 3D Scanning, Reverse Engineering &amp; 3D Printing" />
+    <meta property="og:description" content="Technical clarity. Creative energy. From question to finished object: scanned, modelled and printed." />
+    <meta property="og:image" content="https://printedforfun.com/assets/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "PrintedForFun",
+        "url": "https://printedforfun.com/",
+        "logo": "https://printedforfun.com/assets/icon-512.png",
+        "image": "https://printedforfun.com/assets/og-image.jpg",
+        "email": "printedforfunofficial@gmail.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "Munich", "addressCountry": "DE" },
+        "founder": { "@type": "Person", "name": "Philipp Kreiser" },
+        "knowsAbout": ["3D scanning", "Reverse engineering", "Workflow automation", "3D printing", "Gaussian splatting", "LiDAR scanning"],
+        "sameAs": [
+          "https://www.youtube.com/@PrintedForFun",
+          "https://www.reddit.com/user/PrintedForFun/",
+          "https://www.facebook.com/philipp.kreiser"
+        ]
+      }
+    </script>
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
     <header class="topbar label">
       <a href="./">PFF</a>
-      <span>Technical clarity. <span class="accent">Creative energy.</span></span>
+      <nav aria-label="Sections">
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
-    <main class="hero">
-      <img class="hero__logo" src="assets/logo.png" width="482" height="481" alt="PrintedForFun logo" />
+    <main>
+      <section class="hero">
+        <img class="hero__logo" src="assets/logo.png" width="482" height="481" alt="PrintedForFun logo" />
 
-      <h1 class="hero__title">Printed<span>For</span>Fun</h1>
-      <p class="hero__services label">3D Scanning · Reverse Engineering · 3D Printing</p>
-      <p class="hero__claim">From question to finished object: scanned, modelled and printed.</p>
+        <h1 class="hero__title">Printed<span>For</span>Fun</h1>
+        <p class="hero__services label">3D Scanning · Reverse Engineering · 3D Printing</p>
+        <p class="hero__claim">From question to finished object: scanned, modelled and printed.</p>
 
-      <section class="connect" aria-labelledby="connect-title">
-        <h2 id="connect-title" class="label">Connect</h2>
+        <div class="hero__actions">
+          <a class="button button--primary button--lg" href="#contact">Request a quote</a>
+          <a class="button button--lg" href="#projects">See projects</a>
+        </div>
+      </section>
+
+      <section id="services" class="section" aria-labelledby="services-title">
+        <div class="section__head">
+          <p class="label"><span>01</span> / Services</p>
+          <h2 id="services-title" class="section__title">What I do</h2>
+          <p class="section__lead">
+            From capturing an object to a finished part, with every step in between handled in one place.
+          </p>
+        </div>
+
+        <div class="about">
+          <figure class="about__photo card">
+            <img
+              src="assets/work/scanning-rear-wing-800.jpg"
+              srcset="assets/work/scanning-rear-wing-800.jpg 800w, assets/work/scanning-rear-wing.jpg 972w"
+              sizes="(max-width: 720px) 100vw, 40vw"
+              width="800"
+              height="846"
+              loading="lazy"
+              alt="Scanning a large rear wing with a handheld 3D scanner"
+            />
+          </figure>
+          <div class="about__text card">
+            <p class="about__stat">7+</p>
+            <h3>Years of experience in 3D printing and 3D scanning</h3>
+            <p>
+              PrintedForFun is run by Philipp Kreiser in Munich. Whether it is a single part, a full
+              body kit or a whole building, the work combines precise data capture with practical
+              engineering and real, printed results.
+            </p>
+          </div>
+        </div>
+
+        <ul class="services">
+          <li class="service card">
+            <span class="service__num">01</span>
+            <h3>3D Scanning</h3>
+            <p>Any size: from small PCBs to complete cars, up to whole buildings captured with LiDAR scanners.</p>
+          </li>
+          <li class="service card">
+            <span class="service__num">02</span>
+            <h3>Reverse Engineering &amp; Design</h3>
+            <p>
+              Scan processing in reverse engineering software, prepared for further engineering work or
+              converted to STEP models. New parts designed directly on the scan, with traditional
+              reverse engineering or freeform modelling.
+            </p>
+          </li>
+          <li class="service card">
+            <span class="service__num">03</span>
+            <h3>Workflow Automation</h3>
+            <p>
+              Automating the whole 3D scanning and editing process, from capture through scan
+              processing to the finished model, for faster and repeatable results.
+            </p>
+          </li>
+          <li class="service card">
+            <span class="service__num">04</span>
+            <h3>3D Printing</h3>
+            <p>Rapid prototyping on state-of-the-art printers with high-performance materials.</p>
+          </li>
+          <li class="service card">
+            <span class="service__num">05</span>
+            <h3>Gaussian Splatting</h3>
+            <p>Gaussian splats from LiDAR scans for virtual site surveys: walk through a location without being there.</p>
+          </li>
+          <li class="service card">
+            <span class="service__num">06</span>
+            <h3>Consulting</h3>
+            <p>Advice on 3D printing, reverse engineering and 3D scanning for your project or team.</p>
+          </li>
+          <li class="service service--wide card">
+            <span class="service__num">07</span>
+            <h3>Content &amp; Scanner Tests</h3>
+            <p>
+              Videos and posts on all of the above, including hands-on tests of 3D scanners on
+              <a href="https://www.youtube.com/@PrintedForFun" target="_blank" rel="noopener noreferrer">YouTube</a>.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="projects" class="section" aria-labelledby="projects-title">
+        <div class="section__head">
+          <p class="label"><span>02</span> / Projects</p>
+          <h2 id="projects-title" class="section__title">Selected work</h2>
+          <p class="section__lead">A look at recent projects, from full-size car parts down to tiny tweezers.</p>
+        </div>
+
+        <article class="project">
+          <div class="project__head">
+            <h3>Porsche body kit</h3>
+            <p>
+              A complete body kit: the car was 3D scanned, new panels were designed as freeform surfaces
+              directly on the scan, checked for deviation and printed as full-size parts.
+            </p>
+          </div>
+          <ul class="tags">
+            <li>3D scanning</li>
+            <li>Freeform modelling</li>
+            <li>Deviation analysis</li>
+            <li>Large-format 3D printing</li>
+          </ul>
+          <div class="gallery gallery--featured">
+            <figure class="shot">
+              <a href="assets/work/porsche-bodykit-rear-cad.jpg">
+                <img src="assets/work/porsche-bodykit-rear-cad-800.jpg" srcset="assets/work/porsche-bodykit-rear-cad-800.jpg 800w, assets/work/porsche-bodykit-rear-cad.jpg 1600w" sizes="(max-width: 600px) 100vw, 66vw" width="800" height="478" loading="lazy" alt="Surface model of the complete Porsche body kit, rear view" />
+              </a>
+              <figcaption>Complete body kit, surface model</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="assets/work/porsche-bodykit-front-cad.jpg">
+                <img src="assets/work/porsche-bodykit-front-cad-800.jpg" width="800" height="507" loading="lazy" alt="New front bumper modelled on top of the car scan" />
+              </a>
+              <figcaption>Front bumper on the scan</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="assets/work/porsche-bodykit-fender-cad.jpg">
+                <img src="assets/work/porsche-bodykit-fender-cad-800.jpg" width="800" height="700" loading="lazy" alt="Front fender designed as freeform surfaces on the scan" />
+              </a>
+              <figcaption>Front fender, freeform surfaces</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="assets/work/porsche-intercooler-packaging.jpg">
+                <img src="assets/work/porsche-intercooler-packaging-800.jpg" width="800" height="599" loading="lazy" alt="Intercooler packaging checked inside the scanned rear of the car" />
+              </a>
+              <figcaption>Intercooler packaging in the scan</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="assets/work/porsche-scan-deviation.jpg">
+                <img src="assets/work/porsche-scan-deviation-800.jpg" width="800" height="524" loading="lazy" alt="Colour map showing deviation between CAD surfaces and scan" />
+              </a>
+              <figcaption>Deviation check against the scan</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="assets/work/porsche-bodykit-rear-printed.jpg">
+                <img src="assets/work/porsche-bodykit-rear-printed-800.jpg" width="800" height="694" loading="lazy" alt="Full-size 3D printed rear section with wing and tail light" />
+              </a>
+              <figcaption>Printed rear section</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project__head">
+            <h3>Race Vespa parts</h3>
+            <p>
+              Parts for a race Vespa: the original headset cover was scanned on the scooter and rebuilt
+              as a clean CAD model that fits the surrounding parts.
+            </p>
+          </div>
+          <ul class="tags">
+            <li>3D scanning</li>
+            <li>Reverse engineering</li>
+            <li>CAD</li>
+          </ul>
+          <div class="gallery gallery--2">
+            <figure class="shot">
+              <a href="assets/work/vespa-headset-scan.jpg">
+                <img src="assets/work/vespa-headset-scan-800.jpg" width="800" height="757" loading="lazy" alt="3D scan of the original Vespa headset cover on the scooter" />
+              </a>
+              <figcaption>Original headset cover, scanned</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="assets/work/vespa-headset-cad.jpg">
+                <img src="assets/work/vespa-headset-cad-800.jpg" width="800" height="803" loading="lazy" alt="Reverse-engineered CAD model of the Vespa headset cover" />
+              </a>
+              <figcaption>Reverse-engineered CAD model</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project__head">
+            <h3>Full vehicle scans</h3>
+            <p>Complete vehicles captured inside and out, ready for measuring, design work or visualisation.</p>
+          </div>
+          <ul class="tags">
+            <li>3D scanning</li>
+            <li>Automotive</li>
+          </ul>
+          <div class="gallery gallery--2">
+            <figure class="shot">
+              <a href="assets/work/car-scan-convertible.jpg">
+                <img src="assets/work/car-scan-convertible-800.jpg" width="800" height="709" loading="lazy" alt="Full 3D scan of a convertible with the roof open, including interior" />
+              </a>
+              <figcaption>Convertible, roof open</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="assets/work/car-scan-suv.jpg">
+                <img src="assets/work/car-scan-suv-800.jpg" width="800" height="625" loading="lazy" alt="Full 3D scan of an SUV" />
+              </a>
+              <figcaption>SUV, full exterior</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project__head">
+            <h3>Small &amp; detailed</h3>
+            <p>Detail matters at every scale: PCBs, heatsinks and even fine tweezers.</p>
+          </div>
+          <ul class="tags">
+            <li>High-resolution scanning</li>
+            <li>Electronics</li>
+          </ul>
+          <div class="gallery">
+            <figure class="shot">
+              <a href="assets/work/pcb-scan.jpg">
+                <img src="assets/work/pcb-scan-800.jpg" width="800" height="763" loading="lazy" alt="High-resolution 3D scan of a PCB showing individual components" />
+              </a>
+              <figcaption>PCB</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="assets/work/pcb-heatsink-scan.jpg">
+                <img src="assets/work/pcb-heatsink-scan-800.jpg" width="800" height="821" loading="lazy" alt="3D scan of a PCB with mounted heatsink" />
+              </a>
+              <figcaption>PCB with heatsink</figcaption>
+            </figure>
+            <figure class="shot shot--contain">
+              <a href="assets/work/tweezers-scan.jpg">
+                <img src="assets/work/tweezers-scan-800.jpg" width="800" height="1087" loading="lazy" alt="3D scan of a pair of fine tweezers" />
+              </a>
+              <figcaption>Tweezers</figcaption>
+            </figure>
+          </div>
+        </article>
+      </section>
+
+      <section id="contact" class="section" aria-labelledby="contact-title">
+        <div class="section__head">
+          <p class="label"><span>03</span> / Contact</p>
+          <h2 id="contact-title" class="section__title">Let's make it real</h2>
+        </div>
+
+        <div class="contact__cta card">
+          <p>
+            <strong>Have a project in mind?</strong>
+            Send a short description and a few photos, and I'll get back to you with options and a quote.
+          </p>
+          <a
+            class="button button--primary button--lg"
+            href="mailto:printedforfunofficial@gmail.com?subject=Project%20request%20%E2%80%93%20PrintedForFun&amp;body=Hi%20Philipp%2C%0D%0A%0D%0AProject%3A%20%0D%0ASize%20%2F%20dimensions%3A%20%0D%0AWhat%20I%20need%20(scanning%20%2F%20reverse%20engineering%20%2F%20printing%20%2F%20consulting)%3A%20%0D%0ATimeline%3A%20%0D%0A"
+            >Request a quote</a
+          >
+        </div>
+
         <ul class="links">
           <li>
             <a class="link" href="mailto:printedforfunofficial@gmail.com">
@@ -107,8 +391,39 @@
       </nav>
     </footer>
 
+    <dialog class="lightbox" id="lightbox" aria-label="Image preview">
+      <img alt="" />
+      <div class="lightbox__bar">
+        <span class="lightbox__caption"></span>
+        <button class="lightbox__close" type="button">Close</button>
+      </div>
+    </dialog>
+
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Open project images in a lightbox; without JS the links open the full image.
+      const lightbox = document.getElementById("lightbox");
+      if (typeof lightbox.showModal === "function") {
+        const lbImg = lightbox.querySelector("img");
+        const lbCaption = lightbox.querySelector(".lightbox__caption");
+
+        document.querySelectorAll(".shot a").forEach((link) => {
+          link.addEventListener("click", (event) => {
+            event.preventDefault();
+            const thumb = link.querySelector("img");
+            lbImg.src = link.href;
+            lbImg.alt = thumb.alt;
+            lbCaption.textContent = link.parentElement.querySelector("figcaption")?.textContent ?? "";
+            lightbox.showModal();
+          });
+        });
+
+        lightbox.querySelector(".lightbox__close").addEventListener("click", () => lightbox.close());
+        lightbox.addEventListener("click", (event) => {
+          if (event.target === lightbox) lightbox.close();
+        });
+      }
     </script>
   </body>
 </html>
