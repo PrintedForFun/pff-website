@@ -1,0 +1,3 @@
+# GitHub Pages builds this repo with Jekyll; keep source files out of the published site.
+exclude:
+  - README.md

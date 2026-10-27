@@ -1,0 +1,343 @@
+/* PrintedForFun — brand tokens taken from "PFF Branding.pptx" */
+:root {
+  --navy-900: #16242c;
+  --navy-800: #1d2b34;
+  --navy-700: #212c34;
+  --navy-600: #344852;
+  --teal-500: #3295a4;
+  --teal-600: #247682;
+  --grey-300: #aebbc2;
+  --white: #f5f7f8;
+
+  --font: "Aptos", "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Aptos Display", "Aptos", "Segoe UI Variable Display", "Segoe UI",
+    system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+
+  --radius: 14px;
+  --gutter: clamp(16px, 4vw, 48px);
+
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--navy-900);
+  color: var(--white);
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Faint mesh grid, echoing the scan mesh in the logo */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    radial-gradient(ellipse 60% 45% at 50% 30%, rgba(50, 149, 164, 0.16), transparent 70%),
+    linear-gradient(rgba(174, 187, 194, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(174, 187, 194, 0.05) 1px, transparent 1px);
+  background-size: 100% 100%, 48px 48px, 48px 48px;
+  -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 35%, #000 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 90% 80% at 50% 35%, #000 40%, transparent 100%);
+  pointer-events: none;
+}
+
+a {
+  color: var(--teal-500);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--white);
+}
+
+:focus-visible {
+  outline: 2px solid var(--teal-500);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--grey-300);
+}
+
+/* ---------- Top bar ---------- */
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 24px var(--gutter);
+}
+
+.topbar a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.topbar .accent {
+  color: var(--teal-500);
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  flex: 1;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px var(--gutter) 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero__logo {
+  width: clamp(150px, 32vw, 220px);
+  height: auto;
+  filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.45));
+}
+
+.hero__title {
+  margin: 28px 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 7vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.hero__title span {
+  color: var(--teal-500);
+}
+
+.hero__services {
+  margin: 16px 0 0;
+  color: var(--teal-500);
+}
+
+.hero__claim {
+  margin: 20px 0 0;
+  max-width: 34ch;
+  font-size: 1.125rem;
+  color: var(--grey-300);
+}
+
+/* ---------- Links ---------- */
+
+.connect {
+  width: 100%;
+  max-width: 720px;
+  margin-top: 56px;
+}
+
+.connect .label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 0 20px;
+}
+
+.connect .label::before,
+.connect .label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--navy-600);
+}
+
+.links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 600px) {
+  .links {
+    grid-template-columns: 1fr;
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 100%;
+  padding: 16px 18px;
+  background: rgba(29, 43, 52, 0.8);
+  border: 1px solid var(--navy-600);
+  border-radius: var(--radius);
+  color: var(--white);
+  text-decoration: none;
+  text-align: left;
+  transition: border-color 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+}
+
+.link:hover {
+  color: var(--white);
+  border-color: var(--teal-500);
+  background: var(--navy-800);
+  transform: translateY(-2px);
+}
+
+.link__icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(50, 149, 164, 0.14);
+  color: var(--teal-500);
+}
+
+.link__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.link__text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.link__platform {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--grey-300);
+}
+
+.link__handle {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 24px var(--gutter);
+  border-top: 1px solid var(--navy-600);
+  font-size: 0.875rem;
+  color: var(--grey-300);
+}
+
+.footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.button {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid var(--navy-600);
+  border-radius: 999px;
+  color: var(--white);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.button:hover,
+.button[aria-current="page"] {
+  color: var(--white);
+  border-color: var(--teal-500);
+  background: rgba(50, 149, 164, 0.14);
+}
+
+/* ---------- Legal pages ---------- */
+
+.legal {
+  flex: 1;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 16px var(--gutter) 72px;
+}
+
+.legal h1 {
+  margin: 8px 0 32px;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 2.75rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.legal h2 {
+  margin: 40px 0 8px;
+  font-size: 1.125rem;
+  color: var(--teal-500);
+}
+
+.legal h3 {
+  margin: 24px 0 4px;
+  font-size: 1rem;
+}
+
+.legal p,
+.legal li {
+  color: #d5dde1;
+}
+
+.legal address {
+  font-style: normal;
+}
+
+/* Placeholder still to be filled in — highly visible on purpose */
+.todo {
+  padding: 0 4px;
+  border-radius: 4px;
+  background: #e8b931;
+  color: var(--navy-900);
+  font-weight: 600;
+}
+
+.legal .meta {
+  margin-top: 48px;
+  font-size: 0.875rem;
+  color: var(--grey-300);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
