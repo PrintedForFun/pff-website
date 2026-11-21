@@ -4,7 +4,8 @@ Static site for PrintedForFun, hosted on GitHub Pages at https://printedforfun.c
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Landing page: services, projects gallery, contact |
+| `index.html` | Landing page (English, default): services, working together, projects, contact |
+| `de/index.html` | German landing page; keep in sync with `index.html` (paths use `../`) |
 | `impressum.html` | Legal notice / Impressum (§ 5 DDG) |
 | `privacy.html` | Privacy policy (GDPR) |
 | `404.html` | Not-found page |
@@ -21,7 +22,7 @@ Preview locally: `python -m http.server 8000`, then open http://localhost:8000.
 ## Adding a project image
 
 1. Export a JPEG at max 1600 px wide as `assets/work/<name>.jpg` and an 800 px copy as `assets/work/<name>-800.jpg`.
-2. Copy an existing `<figure class="shot">` block in `index.html` and update the paths, `width`/`height` (of the 800 px file), `alt` and caption.
+2. Copy an existing `<figure class="shot">` block in `index.html` and update the paths, `width`/`height` (of the 800 px file), `alt` and caption. Add the same block to `de/index.html` with `../` in front of the paths and German `alt` text and caption.
 3. Add `<lastmod>` updates to `sitemap.xml` if the page changed significantly.
 
 ## Deploy

@@ -120,6 +120,50 @@ a:hover {
   color: var(--teal-500);
 }
 
+.topbar__end {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 3vw, 32px);
+}
+
+/* Language switch and menu button (the button only shows on small screens) */
+.topbar__lang,
+.topbar__menu {
+  padding: 2px 10px;
+  border: 1px solid var(--navy-600);
+  border-radius: 999px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.topbar .topbar__lang:hover,
+.topbar__menu:hover,
+.topbar.is-open .topbar__menu {
+  border-color: var(--teal-500);
+  color: var(--teal-500);
+}
+
+.topbar__menu {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+}
+
+.topbar__menu svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
 /* ---------- Buttons ---------- */
 
 .button {
@@ -204,6 +248,10 @@ a:hover {
   max-width: 34ch;
   font-size: 1.125rem;
   color: var(--grey-300);
+}
+
+.hero__area {
+  margin: 14px 0 0;
 }
 
 .hero__actions {
@@ -340,6 +388,88 @@ a:hover {
   margin: 0;
   font-size: 0.9375rem;
   color: var(--grey-300);
+}
+
+/* ---------- Working together ---------- */
+
+.process {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.checklist,
+.fleet {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9375rem;
+  color: var(--grey-300);
+}
+
+.checklist li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.checklist li + li {
+  margin-top: 6px;
+}
+
+.checklist li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.7em;
+  width: 8px;
+  height: 2px;
+  background: var(--teal-500);
+}
+
+.fleet dt {
+  font-weight: 600;
+  color: var(--white);
+}
+
+.fleet dd {
+  margin: 0 0 10px;
+}
+
+.fleet + p {
+  font-size: 0.875rem;
+}
+
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 32px;
+  margin: 0 0 14px;
+}
+
+.facts div {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.facts dt {
+  font-size: 0.75rem;
+  color: var(--grey-300);
+}
+
+.facts dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--teal-500);
+}
+
+.tags--materials {
+  margin: 14px 0 0;
 }
 
 /* ---------- Projects ---------- */
@@ -585,6 +715,10 @@ a:hover {
   gap: 12px;
 }
 
+.links li:first-child {
+  grid-column: 1 / -1;
+}
+
 .link {
   display: flex;
   align-items: center;
@@ -744,7 +878,8 @@ a:hover {
 }
 
 @media (max-width: 720px) {
-  .about {
+  .about,
+  .process {
     grid-template-columns: 1fr;
   }
 
@@ -754,8 +889,55 @@ a:hover {
 }
 
 @media (max-width: 600px) {
+  /* Without JS: nav wraps onto its own row below the logo */
+  .topbar {
+    position: relative;
+    flex-wrap: wrap;
+  }
+
   .topbar nav {
+    flex-wrap: wrap;
+    gap: 8px 16px;
+  }
+
+  .topbar:not(.topbar--js) .topbar__end {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  /* With JS: menu button opens the nav as a dropdown */
+  .topbar--js .topbar__menu {
+    display: inline-flex;
+  }
+
+  .topbar--js nav {
     display: none;
+    position: absolute;
+    top: calc(100% - 12px);
+    left: var(--gutter);
+    right: var(--gutter);
+    z-index: 20;
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px;
+    border: 1px solid var(--navy-600);
+    border-radius: var(--radius);
+    background: var(--navy-800);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  }
+
+  .topbar--js.is-open nav {
+    display: flex;
+  }
+
+  .topbar--js nav a {
+    padding: 12px 14px;
+    border-radius: 10px;
+  }
+
+  .topbar--js nav a:hover,
+  .topbar--js nav a:focus-visible {
+    background: rgba(50, 149, 164, 0.14);
   }
 
   .section {
