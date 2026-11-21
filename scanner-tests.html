@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>3D Scanner Tests — PrintedForFun</title>
+    <meta
+      name="description"
+      content="The same three test objects scanned with every 3D scanner I review: an anatomical skull, the Scan Bench and a Raspberry Pi. Compare the scans side by side in 3D."
+    />
+    <link rel="canonical" href="https://printedforfun.com/scanner-tests.html" />
+    <meta name="theme-color" content="#16242c" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icon-180.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="PrintedForFun" />
+    <meta property="og:url" content="https://printedforfun.com/scanner-tests.html" />
+    <meta property="og:title" content="3D Scanner Tests — PrintedForFun" />
+    <meta property="og:description" content="Same objects, different scanners: compare skull, Scan Bench and Raspberry Pi scans side by side in 3D." />
+    <meta property="og:image" content="https://printedforfun.com/assets/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="topbar label">
+      <a href="./">PFF</a>
+      <nav aria-label="Sections">
+        <a href="./#services">Services</a>
+        <a href="./#projects">Projects</a>
+        <a href="scanner-tests.html" aria-current="page">Scanner tests</a>
+        <a href="./#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section section--first" aria-labelledby="tests-title">
+        <div class="section__head">
+          <p class="label"><span>PFF</span> / Scanner tests</p>
+          <h1 id="tests-title" class="section__title">Same objects, different scanners</h1>
+          <p class="section__lead">
+            Every 3D scanner I test scans the same three objects. Pick any two scans and compare them
+            side by side in 3D. The full reviews are on
+            <a href="https://www.youtube.com/@PrintedForFun" target="_blank" rel="noopener noreferrer">YouTube</a>.
+          </p>
+        </div>
+
+        <ul class="services">
+          <li class="service card">
+            <span class="service__num">01</span>
+            <h3><a href="#skull">Anatomical skull</a></h3>
+            <p>
+              Organic shapes: smooth freeform surfaces plus deep eye sockets and the nasal cavity, which
+              show how far a scanner can reach into cavities.
+            </p>
+          </li>
+          <li class="service card">
+            <span class="service__num">02</span>
+            <h3><a href="#scan-bench">Scan Bench</a></h3>
+            <p>
+              Mechanical parts: the
+              <a href="https://www.printables.com/model/1445865-scanbench-the-benchy-for-3d-scanners" target="_blank" rel="noopener noreferrer">Scan Bench</a>,
+              “the Benchy for 3D scanners”, with sharp edges, holes, thin walls and small text.
+            </p>
+          </li>
+          <li class="service card">
+            <span class="service__num">03</span>
+            <h3><a href="#raspberry-pi">Raspberry Pi</a></h3>
+            <p>
+              Fine detail and demanding surfaces, without scan spray: reflective ports, connectors and
+              the printing on the PCB.
+            </p>
+          </li>
+        </ul>
+
+        <p class="tests__method">
+          All scans of a test are aligned to the same coordinate system in QuickSurface, so they open
+          in the same orientation. Where needed, meshes were reduced to just under 4 million triangles
+          to fit Sketchfab's upload limit.
+        </p>
+      </section>
+
+      <section id="compare" class="section compare" aria-labelledby="compare-title" hidden>
+        <div class="section__head">
+          <p class="label"><span>01</span> / Compare</p>
+          <h2 id="compare-title" class="section__title">Side by side</h2>
+        </div>
+
+        <div class="compare__tabs" role="group" aria-label="Test object"></div>
+
+        <div class="compare__panes">
+          <div class="viewer card">
+            <label class="viewer__pick">
+              <span class="label">Scan <span class="accent">A</span></span>
+              <select></select>
+            </label>
+            <div class="viewer__stage">
+              <div class="viewer__note viewer__consent">
+                <strong>3D viewer by Sketchfab</strong>
+                <p>
+                  Loading the viewers connects your browser to Sketchfab (Epic Games, USA), which receives
+                  your IP address and may set cookies. See the <a href="privacy.html#sketchfab">Privacy Policy</a>.
+                </p>
+                <button class="button button--primary" type="button">Load 3D viewers</button>
+              </div>
+              <div class="viewer__note viewer__empty" hidden><p></p></div>
+            </div>
+          </div>
+          <div class="viewer card">
+            <label class="viewer__pick">
+              <span class="label">Scan <span class="accent">B</span></span>
+              <select></select>
+            </label>
+            <div class="viewer__stage">
+              <div class="viewer__note viewer__consent">
+                <strong>3D viewer by Sketchfab</strong>
+                <p>
+                  Loading the viewers connects your browser to Sketchfab (Epic Games, USA), which receives
+                  your IP address and may set cookies. See the <a href="privacy.html#sketchfab">Privacy Policy</a>.
+                </p>
+                <button class="button button--primary" type="button">Load 3D viewers</button>
+              </div>
+              <div class="viewer__note viewer__empty" hidden><p></p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="scans-title">
+        <div class="section__head">
+          <p class="label"><span>02</span> / All scans</p>
+          <h2 id="scans-title" class="section__title">Scans and settings</h2>
+          <p class="section__lead">Newest first. Every scan opens on Sketchfab, with the full description of the process.</p>
+        </div>
+
+        <!-- To add a scan: copy a <tr> and set data-uid to the Sketchfab model ID
+             (the 32-character code at the end of the model URL). -->
+
+        <article class="project" id="skull" data-test="Anatomical skull">
+          <div class="project__head">
+            <h3>Anatomical skull</h3>
+            <p>Organic shapes and deep cavities. Scanned on a turntable with marker geometries, top and bottom merged.</p>
+          </div>
+          <div class="table-wrap">
+            <table class="scans">
+              <thead>
+                <tr><th scope="col">Scanner</th><th scope="col">Mode</th><th scope="col">Settings</th><th scope="col">Date</th><th scope="col"><span class="visually-hidden">Links</span></th></tr>
+              </thead>
+              <tbody>
+                <tr data-uid="a4b647e2740341fe85b6c1b56bb00254">
+                  <th scope="row">Creality Pika</th><td>Laser</td><td>0.2 mm · marker tracking</td><td><time datetime="2026-11">Nov 2026</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/a4b647e2740341fe85b6c1b56bb00254" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+                <tr data-uid="19b51e43217e424482f2591c528cfcf6">
+                  <th scope="row">Creality Pika</th><td>IR</td><td>Face mode · geometry tracking</td><td><time datetime="2026-11">Nov 2026</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/19b51e43217e424482f2591c528cfcf6" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+                <tr data-uid="1a26f8db15454510ad53d22b59f970b8">
+                  <th scope="row">Revopoint POP4</th><td>Laser</td><td>0.15 mm · marker tracking</td><td><time datetime="2026-06">Jun 2026</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/1a26f8db15454510ad53d22b59f970b8" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+                <tr data-uid="afae6ccc5c94441db6ee96b45679fec6">
+                  <th scope="row">Revopoint POP4</th><td>FullField</td><td>Feature tracking</td><td><time datetime="2026-06">Jun 2026</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/afae6ccc5c94441db6ee96b45679fec6" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+                <tr data-uid="7c38bad1ce694006b27ddf77ca0e04b4">
+                  <th scope="row">Revopoint POP4</th><td>Hybrid</td><td>Feature tracking</td><td><time datetime="2026-06">Jun 2026</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/7c38bad1ce694006b27ddf77ca0e04b4" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+                <tr data-uid="a3c54e037a144bb0ba9c18eb6c1d720f">
+                  <th scope="row">Revopoint POP4</th><td>VCSEL</td><td>Feature tracking</td><td><time datetime="2026-06">Jun 2026</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/a3c54e037a144bb0ba9c18eb6c1d720f" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+                <tr data-uid="642f279cc185427398a7b1fbb8567da2">
+                  <th scope="row">Creality Sermoon P1</th><td>Markerless laser</td><td>0.25 mm · feature tracking · quick test</td><td><time datetime="2026-05">May 2026</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/642f279cc185427398a7b1fbb8567da2" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+                <tr data-uid="2b26e61e2893403cb78cdedd640194b8">
+                  <th scope="row">Revopoint MetroY Pro</th><td>Laser</td><td>0.15 mm · marker tracking</td><td><time datetime="2025-12">Dec 2025</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/2b26e61e2893403cb78cdedd640194b8" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+                <tr data-uid="7d2dd18165034be1a026919ceaf2e40e">
+                  <th scope="row">Einstar Rockit</th><td>Laser</td><td>0.3 mm · marker tracking · reduced to ~60&nbsp;%</td><td><time datetime="2025-10">Oct 2025</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/7d2dd18165034be1a026919ceaf2e40e" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="project" id="scan-bench" data-test="Scan Bench">
+          <div class="project__head">
+            <h3>Scan Bench</h3>
+            <p>
+              Mechanical features and fine geometry on the
+              <a href="https://www.printables.com/model/1445865-scanbench-the-benchy-for-3d-scanners" target="_blank" rel="noopener noreferrer">Scan Bench</a>.
+              Scanned on a turntable with marker geometries unless noted.
+            </p>
+          </div>
+          <div class="table-wrap">
+            <table class="scans">
+              <thead>
+                <tr><th scope="col">Scanner</th><th scope="col">Mode</th><th scope="col">Settings</th><th scope="col">Date</th><th scope="col"><span class="visually-hidden">Links</span></th></tr>
+              </thead>
+              <tbody>
+                <tr data-uid="feaac7dd13d64bbb884e52fad3cbaf10">
+                  <th scope="row">Creality Pika</th><td>Laser</td><td>0.1 mm · marker tracking · wired</td><td><time datetime="2026-10">Oct 2026</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/feaac7dd13d64bbb884e52fad3cbaf10" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+                <tr data-uid="bd73951beab145f7aabe4544c145d26b">
+                  <th scope="row">Revopoint Trackit SR</th><td>Laser</td><td>0.1 mm · marker tracking</td><td><time datetime="2026-10">Oct 2026</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/bd73951beab145f7aabe4544c145d26b" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+                <tr data-uid="ed6b19e5b51d463daf99ef87246ddbb8">
+                  <th scope="row">EinScan Trak</th><td>Laser</td><td>0.1 mm · hand-piece tracking</td><td><time datetime="2026-10">Oct 2026</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/ed6b19e5b51d463daf99ef87246ddbb8" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+                <tr data-uid="b3d189b710bd4232877fe8d0d9f06b1f">
+                  <th scope="row">Revopoint POP4</th><td>Laser</td><td>0.15 mm · marker tracking</td><td><time datetime="2026-06">Jun 2026</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/b3d189b710bd4232877fe8d0d9f06b1f" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+                <tr data-uid="2b4773d7208046d59fe4b882535baacc">
+                  <th scope="row">Revopoint POP4</th><td>FullField</td><td>High accuracy · marker tracking</td><td><time datetime="2026-06">Jun 2026</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/2b4773d7208046d59fe4b882535baacc" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+                <tr data-uid="c99a51b628b5462b9c730ec3bebb0ab7">
+                  <th scope="row">Revopoint POP4</th><td>Hybrid</td><td>High accuracy · feature tracking</td><td><time datetime="2026-06">Jun 2026</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/c99a51b628b5462b9c730ec3bebb0ab7" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+                <tr data-uid="2147fe4955734247b0d9e00c4bc7c6a6">
+                  <th scope="row">Revopoint POP4</th><td>VCSEL</td><td>High accuracy · feature tracking</td><td><time datetime="2026-06">Jun 2026</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/2147fe4955734247b0d9e00c4bc7c6a6" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+                <tr data-uid="a2dd4e85147e497c9e8630ccd262f3a2">
+                  <th scope="row">EinScan Rigil</th><td>Laser</td><td>0.1 mm · marker tracking</td><td><time datetime="2026-04">Apr 2026</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/a2dd4e85147e497c9e8630ccd262f3a2" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+                <tr data-uid="2c840af56ca3400bb6c5d24b788f3981">
+                  <th scope="row">EinScan Rigil</th><td>IR large</td><td>0.5 mm · marker tracking</td><td><time datetime="2026-04">Apr 2026</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/2c840af56ca3400bb6c5d24b788f3981" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+                <tr data-uid="b389d64babc246bca8a3923e19df8508">
+                  <th scope="row">EinScan Rigil</th><td>IR small</td><td>0.2 mm · marker tracking</td><td><time datetime="2026-04">Apr 2026</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/b389d64babc246bca8a3923e19df8508" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+                <tr data-uid="72fa8ea844e047b78eb03c39bc219bc1">
+                  <th scope="row">Creality Sermoon P1</th><td>Laser</td><td>0.1 mm · marker tracking</td><td><time datetime="2026-03">Mar 2026</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/72fa8ea844e047b78eb03c39bc219bc1" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+                <tr data-uid="f1b06ad088e64960889a9cd90ced8209">
+                  <th scope="row">Creality Sermoon P1</th><td>IR normal</td><td>Feature tracking</td><td><time datetime="2026-03">Mar 2026</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/f1b06ad088e64960889a9cd90ced8209" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+                <tr data-uid="5d43f3e9784c482ca8ae477ef092dddd">
+                  <th scope="row">Revopoint MetroY Pro</th><td>Laser</td><td>0.15 mm · marker tracking</td><td><time datetime="2025-12">Dec 2025</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/5d43f3e9784c482ca8ae477ef092dddd" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+                <tr data-uid="6620ed2ac70e4a8589ca42ab1b6ff902">
+                  <th scope="row">Revopoint MetroY Pro</th><td>Auto turntable</td><td>Highest resolution · feature tracking</td><td><time datetime="2025-12">Dec 2025</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/6620ed2ac70e4a8589ca42ab1b6ff902" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+                <tr data-uid="a19598399ed241b2b916f28a52d777dc">
+                  <th scope="row">Einstar Rockit</th><td>Laser</td><td>0.1 mm · marker tracking</td><td><time datetime="2025-12">Dec 2025</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/a19598399ed241b2b916f28a52d777dc" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+                <tr data-uid="9edf75aaef514112ac36e2c95e8b4117">
+                  <th scope="row">Einstar Rockit</th><td>NIR</td><td>0.2 mm · marker tracking</td><td><time datetime="2025-12">Dec 2025</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/9edf75aaef514112ac36e2c95e8b4117" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+                <tr data-uid="fc0c0251e8784feabd859bec4cb7bac8">
+                  <th scope="row">Creality Sermoon S1</th><td>Laser</td><td>0.1 mm · marker tracking</td><td><time datetime="2025-12">Dec 2025</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/fc0c0251e8784feabd859bec4cb7bac8" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+                <tr data-uid="5d9a38dc9c3247599ab2372a98bd8db4">
+                  <th scope="row">Creality Sermoon S1</th><td>NIR small</td><td>Marker tracking · processed at 0.1 mm</td><td><time datetime="2025-12">Dec 2025</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/5d9a38dc9c3247599ab2372a98bd8db4" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+                <tr data-uid="b861d2e1599742df9bb167e01e1339b3">
+                  <th scope="row">Matter and Form THREE</th><td>Turntable</td><td>Two positions · meshed on the scanner</td><td><time datetime="2025-12">Dec 2025</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/b861d2e1599742df9bb167e01e1339b3" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="project" id="raspberry-pi" data-test="Raspberry Pi">
+          <div class="project__head">
+            <h3>Raspberry Pi</h3>
+            <p>Fine detail and demanding surfaces: shiny ports, connectors and the printing on the PCB.</p>
+          </div>
+          <div class="table-wrap">
+            <table class="scans">
+              <thead>
+                <tr><th scope="col">Scanner</th><th scope="col">Mode</th><th scope="col">Settings</th><th scope="col">Date</th><th scope="col"><span class="visually-hidden">Links</span></th></tr>
+              </thead>
+              <tbody>
+                <tr data-uid="7cec04e2565d4d6c9a03cd6130b7baf3">
+                  <th scope="row">Revopoint MetroY Pro</th><td>Auto turntable</td><td>0.1 mm · with scan spray</td><td><time datetime="2026-02">Feb 2026</time></td>
+                  <td class="scans__actions"><a href="https://sketchfab.com/models/7cec04e2565d4d6c9a03cd6130b7baf3" target="_blank" rel="noopener noreferrer">Sketchfab ↗</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© <span id="year">2026</span> PrintedForFun · Philipp Kreiser</span>
+      <nav aria-label="Legal">
+        <a class="button" href="impressum.html">Legal Notice</a>
+        <a class="button" href="privacy.html">Privacy Policy</a>
+      </nav>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Side-by-side compare tool. Sketchfab is only contacted after the visitor clicks
+      // "Load 3D viewers"; without JS the tables with plain Sketchfab links remain.
+      (() => {
+        const compare = document.getElementById("compare");
+        const tests = [...document.querySelectorAll("[data-test]")];
+        if (!compare || !tests.length) return;
+
+        const embedUrl = (uid) =>
+          `https://sketchfab.com/models/${uid}/embed?autostart=1&preload=1&ui_theme=dark&ui_hint=0&dnt=1`;
+        const scansOf = (test) =>
+          [...test.querySelectorAll("tr[data-uid]")].map((row) => ({
+            uid: row.dataset.uid,
+            row,
+            label: `${row.cells[0].textContent.trim()} · ${row.cells[1].textContent.trim()}`,
+          }));
+
+        const tabs = compare.querySelector(".compare__tabs");
+        const panes = [...compare.querySelectorAll(".viewer")].map((el, i) => ({
+          el,
+          name: "AB"[i],
+          select: el.querySelector("select"),
+          stage: el.querySelector(".viewer__stage"),
+          consent: el.querySelector(".viewer__consent"),
+          empty: el.querySelector(".viewer__empty"),
+        }));
+        let current = null;
+        let consented = false;
+
+        function render(pane) {
+          const uid = pane.select.value;
+          const scan = scansOf(current).find((s) => s.uid === uid);
+          let frame = pane.stage.querySelector("iframe");
+
+          pane.empty.hidden = Boolean(uid);
+          pane.consent.hidden = !uid || consented;
+
+          if (uid && consented) {
+            if (!frame) {
+              frame = document.createElement("iframe");
+              frame.allow = "autoplay; fullscreen; xr-spatial-tracking";
+              frame.allowFullscreen = true;
+              pane.stage.append(frame);
+            }
+            if (frame.dataset.uid !== uid) {
+              frame.dataset.uid = uid;
+              frame.src = embedUrl(uid);
+            }
+            frame.title = `3D scan: ${current.dataset.test}, ${scan.label}`;
+          } else if (frame) {
+            frame.remove();
+          }
+
+          scansOf(current).forEach((s) => {
+            const shown = panes.filter((p) => p.select.value === s.uid).map((p) => p.name);
+            markShown(s.row, shown.join(" + "));
+          });
+        }
+
+        // Highlight the table rows currently shown in the viewers (badge on the scanner cell)
+        function markShown(row, text) {
+          [row, row.cells[0]].forEach((el) => {
+            if (text) el.dataset.shown = text;
+            else delete el.dataset.shown;
+          });
+        }
+
+        function selectTest(test, picks = {}) {
+          if (current && current !== test) scansOf(current).forEach((s) => markShown(s.row, ""));
+          current = test;
+          const scans = scansOf(test);
+
+          tabs.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b.value === test.id));
+
+          panes.forEach((pane, i) => {
+            pane.select.replaceChildren(
+              ...(i > 0 ? [new Option("— Choose a scan —", "")] : []),
+              ...scans.map((s) => new Option(s.label, s.uid))
+            );
+            pane.select.value = picks[pane.name] ?? scans[i]?.uid ?? "";
+            pane.empty.querySelector("p").textContent =
+              scans.length < 2 ? "Only one scan of this test is online so far." : "Choose a scan to compare.";
+          });
+          panes.forEach(render);
+        }
+
+        // Tabs for the test objects
+        tests.forEach((test) => {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "button";
+          button.value = test.id;
+          button.textContent = test.dataset.test;
+          button.addEventListener("click", () => selectTest(test));
+          tabs.append(button);
+        });
+
+        // "A" / "B" buttons in every table row
+        tests.forEach((test) =>
+          scansOf(test).forEach((scan) => {
+            const cell = scan.row.querySelector(".scans__actions");
+            const link = cell.querySelector("a");
+            panes.forEach((pane) => {
+              const button = document.createElement("button");
+              button.type = "button";
+              button.className = "button scans__pick";
+              button.textContent = pane.name;
+              button.setAttribute("aria-label", `Show ${scan.label} as scan ${pane.name}`);
+              button.addEventListener("click", () => {
+                const picks = Object.fromEntries(panes.map((p) => [p.name, current === test ? p.select.value : undefined]));
+                picks[pane.name] = scan.uid;
+                selectTest(test, picks);
+                compare.scrollIntoView({ block: "start" });
+              });
+              cell.insertBefore(button, link);
+            });
+          })
+        );
+
+        panes.forEach((pane) => {
+          pane.select.addEventListener("change", () => render(pane));
+          pane.consent.querySelector("button").addEventListener("click", () => {
+            consented = true;
+            panes.forEach(render);
+          });
+        });
+
+        compare.hidden = false;
+        const fromHash = tests.find((t) => `#${t.id}` === location.hash);
+        selectTest(fromHash ?? tests[0]);
+      })();
+    </script>
+  </body>
+</html>
