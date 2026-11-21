@@ -9,6 +9,9 @@
       content="PrintedForFun by Philipp Kreiser, Munich: 3D scanning from PCBs to cars and buildings, reverse engineering to STEP, scan workflow automation, 3D printing for rapid prototyping, Gaussian splatting and consulting."
     />
     <link rel="canonical" href="https://printedforfun.com/" />
+    <link rel="alternate" hreflang="en" href="https://printedforfun.com/" />
+    <link rel="alternate" hreflang="de" href="https://printedforfun.com/de/" />
+    <link rel="alternate" hreflang="x-default" href="https://printedforfun.com/" />
     <meta name="theme-color" content="#16242c" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icon-32.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png" />
@@ -19,7 +22,7 @@
     <meta property="og:site_name" content="PrintedForFun" />
     <meta property="og:url" content="https://printedforfun.com/" />
     <meta property="og:title" content="PrintedForFun — 3D Scanning, Reverse Engineering &amp; 3D Printing" />
-    <meta property="og:description" content="Technical clarity. Creative energy. From question to finished object: scanned, modelled and printed." />
+    <meta property="og:description" content="Technical clarity. Creative energy. From real object to finished part: scanned, modelled and printed." />
     <meta property="og:image" content="https://printedforfun.com/assets/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -35,9 +38,14 @@
         "image": "https://printedforfun.com/assets/og-image.jpg",
         "email": "contact@printedforfun.com",
         "address": { "@type": "PostalAddress", "addressLocality": "Munich", "addressCountry": "DE" },
+        "areaServed": [
+          { "@type": "State", "name": "Bavaria" },
+          { "@type": "Country", "name": "Austria" }
+        ],
         "founder": { "@type": "Person", "name": "Philipp Kreiser" },
         "knowsAbout": ["3D scanning", "Reverse engineering", "Workflow automation", "3D printing", "Gaussian splatting", "LiDAR scanning"],
         "sameAs": [
+          "https://www.linkedin.com/in/philipp-kreiser-12398233a/",
           "https://www.youtube.com/@PrintedForFun",
           "https://www.reddit.com/user/PrintedForFun/",
           "https://www.facebook.com/philipp.kreiser"
@@ -49,11 +57,19 @@
   <body>
     <header class="topbar label">
       <a href="./">PFF</a>
-      <nav aria-label="Sections">
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <div class="topbar__end">
+        <nav id="site-nav" aria-label="Sections">
+          <a href="#services">Services</a>
+          <a href="#process">Working together</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="topbar__lang" href="de/" hreflang="de" lang="de" aria-label="Deutsche Version">DE</a>
+        <button class="topbar__menu" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+          Menu
+        </button>
+      </div>
     </header>
 
     <main>
@@ -62,7 +78,8 @@
 
         <h1 class="hero__title">Printed<span>For</span>Fun</h1>
         <p class="hero__services label">3D Scanning · Reverse Engineering · 3D Printing</p>
-        <p class="hero__claim">From question to finished object: scanned, modelled and printed.</p>
+        <p class="hero__claim">From real object to finished part: scanned, modelled and printed.</p>
+        <p class="hero__area label">Based in Munich</p>
 
         <div class="hero__actions">
           <a class="button button--primary button--lg" href="#contact">Request a quote</a>
@@ -75,7 +92,7 @@
           <p class="label"><span>01</span> / Services</p>
           <h2 id="services-title" class="section__title">What I do</h2>
           <p class="section__lead">
-            From capturing an object to a finished part, with every step in between handled in one place.
+            I take your project from the first scan to the finished part, all in one place.
           </p>
         </div>
 
@@ -95,9 +112,9 @@
             <p class="about__stat">7+</p>
             <h3>Years of experience in 3D printing and 3D scanning</h3>
             <p>
-              PrintedForFun is run by Philipp Kreiser in Munich. Whether it is a single part, a full
-              body kit or a whole building, the work combines precise data capture with practical
-              engineering and real, printed results.
+              I'm Philipp Kreiser and run PrintedForFun from Munich. Whether it's a single part, a
+              complete body kit or an entire building, I combine precise 3D data with hands-on
+              engineering, and the result is something real you can hold in your hand.
             </p>
           </div>
         </div>
@@ -106,54 +123,133 @@
           <li class="service card">
             <span class="service__num">01</span>
             <h3>3D Scanning</h3>
-            <p>Any size: from small PCBs to complete cars, up to whole buildings captured with LiDAR scanners.</p>
+            <p>Objects of any size, from small PCBs and complete cars to entire buildings, which I capture with LiDAR.</p>
           </li>
           <li class="service card">
             <span class="service__num">02</span>
             <h3>Reverse Engineering &amp; Design</h3>
             <p>
-              Scan processing in reverse engineering software, prepared for further engineering work or
-              converted to STEP models. New parts designed directly on the scan, with traditional
-              reverse engineering or freeform modelling.
+              I turn scans into data you can work with: processed meshes for further engineering or
+              complete STEP models. New parts can be designed directly on the scan, either with classic
+              reverse engineering or as freeform surfaces.
             </p>
           </li>
           <li class="service card">
             <span class="service__num">03</span>
             <h3>Workflow Automation</h3>
             <p>
-              Automating the whole 3D scanning and editing process, from capture through scan
-              processing to the finished model, for faster and repeatable results.
+              I automate the scanning workflow, from capture through processing to the finished model,
+              so results are faster and repeatable.
             </p>
           </li>
           <li class="service card">
             <span class="service__num">04</span>
             <h3>3D Printing</h3>
-            <p>Rapid prototyping on state-of-the-art printers with high-performance materials.</p>
+            <p>Prototypes and functional parts, printed in-house with FDM and SLA in engineering materials.</p>
           </li>
           <li class="service card">
             <span class="service__num">05</span>
             <h3>Gaussian Splatting</h3>
-            <p>Gaussian splats from LiDAR scans for virtual site surveys: walk through a location without being there.</p>
+            <p>Gaussian splats created from LiDAR scans for virtual site visits: explore a location without travelling there.</p>
           </li>
           <li class="service card">
             <span class="service__num">06</span>
             <h3>Consulting</h3>
-            <p>Advice on 3D printing, reverse engineering and 3D scanning for your project or team.</p>
+            <p>Advice on 3D scanning, reverse engineering and 3D printing, whether for a single project or your whole team.</p>
           </li>
           <li class="service service--wide card">
             <span class="service__num">07</span>
             <h3>Content &amp; Scanner Tests</h3>
             <p>
-              Videos and posts on all of the above, including hands-on tests of 3D scanners on
+              Videos and posts on everything above, including hands-on 3D scanner reviews on
               <a href="https://www.youtube.com/@PrintedForFun" target="_blank" rel="noopener noreferrer">YouTube</a>.
             </p>
           </li>
         </ul>
       </section>
 
+      <section id="process" class="section" aria-labelledby="process-title">
+        <div class="section__head">
+          <p class="label"><span>02</span> / Working together</p>
+          <h2 id="process-title" class="section__title">How projects work</h2>
+          <p class="section__lead">
+            Every project is planned individually, and we agree on the details directly. Here's what
+            you can expect.
+          </p>
+        </div>
+
+        <ul class="process">
+          <li class="service card">
+            <span class="service__num">Location</span>
+            <h3>On site or sent in</h3>
+            <ul class="checklist">
+              <li>I scan on site across Bavaria and Austria</li>
+              <li>Larger projects further away are possible on request</li>
+              <li>You can also send me your parts for scanning</li>
+              <li>Reverse engineering works from anywhere if you already have scan data</li>
+            </ul>
+          </li>
+          <li class="service card">
+            <span class="service__num">Timeline &amp; rate</span>
+            <h3>Typical project</h3>
+            <dl class="facts">
+              <div><dt>Scanning</dt><dd>~1 week</dd></div>
+              <div><dt>Reverse engineering</dt><dd>~2 weeks</dd></div>
+              <div><dt>Hourly rate</dt><dd>€150–200</dd></div>
+            </dl>
+            <p>
+              Need it sooner? That's often possible by arrangement, depending on my current workload.
+              The exact rate depends on the type of work.
+            </p>
+          </li>
+          <li class="service card">
+            <span class="service__num">Equipment</span>
+            <h3>Scanner fleet</h3>
+            <dl class="fleet">
+              <dt>EinScan Trak</dt>
+              <dd>Captures large objects such as complete vehicles, using an optical tracker</dd>
+              <dt>EinScan Rigil</dt>
+              <dd>Handheld laser and infrared scanner for parts, interiors and tight spaces</dd>
+              <dt>SHARE C1</dt>
+              <dd>LiDAR scanner for buildings, rooms and outdoor sites</dd>
+            </dl>
+            <p>Plus further scanners for small, highly detailed parts.</p>
+          </li>
+          <li class="service card">
+            <span class="service__num">Deliverables</span>
+            <h3>What you get</h3>
+            <ul class="checklist">
+              <li>Raw 3D scans</li>
+              <li>Processed scans, cleaned up and aligned to a coordinate system</li>
+              <li>Partial reverse engineering, e.g. just the mounting points and interfaces</li>
+              <li>Complete reverse-engineered CAD models as STEP</li>
+              <li>Finished 3D printed parts</li>
+            </ul>
+          </li>
+          <li class="service service--wide card">
+            <span class="service__num">3D printing</span>
+            <h3>FDM and SLA in-house</h3>
+            <p>
+              I print directly in my workshop, in a wide range of materials. For other print
+              technologies, I work with external partners.
+            </p>
+            <ul class="tags tags--materials" aria-label="FDM materials">
+              <li>PLA</li>
+              <li>PETG</li>
+              <li>ABS</li>
+              <li>ASA</li>
+              <li>PC</li>
+              <li>Nylon</li>
+              <li>TPU</li>
+              <li>SLA resin</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
       <section id="projects" class="section" aria-labelledby="projects-title">
         <div class="section__head">
-          <p class="label"><span>02</span> / Projects</p>
+          <p class="label"><span>03</span> / Projects</p>
           <h2 id="projects-title" class="section__title">Selected work</h2>
           <p class="section__lead">
             A look at recent projects, from historic building trims and full-size car parts down to tiny tweezers.
@@ -304,9 +400,9 @@
           <div class="project__head">
             <h3>Race Vespa parts</h3>
             <p>
-              Parts for a race Vespa: the original headset cover was 3D scanned directly on the scooter,
-              rebuilt as a clean CAD model in QuickSurface that fits the surrounding parts, and the
-              finished cover is now fitted to the bike.
+              The original headset cover was scanned directly on the scooter and rebuilt in
+              QuickSurface as a clean CAD model that fits the surrounding parts. The finished cover is
+              now on the bike.
             </p>
           </div>
           <ul class="tags">
@@ -444,18 +540,19 @@
 
       <section id="contact" class="section" aria-labelledby="contact-title">
         <div class="section__head">
-          <p class="label"><span>03</span> / Contact</p>
+          <p class="label"><span>04</span> / Contact</p>
           <h2 id="contact-title" class="section__title">Let's make it real</h2>
         </div>
 
         <div class="contact__cta card">
           <p>
             <strong>Have a project in mind?</strong>
-            Send a short description and a few photos, and I'll get back to you with options and a quote.
+            Send me a short description and a few photos. I'll get back to you with options and a
+            quote, and we'll plan the details together.
           </p>
           <a
             class="button button--primary button--lg"
-            href="mailto:contact@printedforfun.com?subject=Project%20request%20%E2%80%93%20PrintedForFun&amp;body=Hi%20Philipp%2C%0D%0A%0D%0AProject%3A%20%0D%0ASize%20%2F%20dimensions%3A%20%0D%0AWhat%20I%20need%20(scanning%20%2F%20reverse%20engineering%20%2F%20printing%20%2F%20consulting)%3A%20%0D%0ATimeline%3A%20%0D%0A"
+            href="mailto:contact@printedforfun.com?subject=Project%20request%20%E2%80%93%20PrintedForFun&amp;body=Hi%20Philipp%2C%0D%0A%0D%0AProject%3A%20%0D%0ASize%20%2F%20dimensions%3A%20%0D%0AWhat%20I%20need%20(scanning%20%2F%20reverse%20engineering%20%2F%20printing%20%2F%20consulting)%3A%20%0D%0ALocation%20(on%20site%20or%20sent%20in)%3A%20%0D%0ATimeline%3A%20%0D%0A"
             >Request a quote</a
           >
         </div>
@@ -472,6 +569,20 @@
               <span class="link__text">
                 <span class="link__platform">E-Mail</span>
                 <span class="link__handle">contact@printedforfun.com</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="link" href="https://www.linkedin.com/in/philipp-kreiser-12398233a/" target="_blank" rel="noopener noreferrer">
+              <span class="link__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="3" />
+                  <path d="M8 10.5V16M8 7.6v.1M11.5 16v-5.5M11.5 13c0-1.6 1-2.6 2.4-2.6 1.4 0 2.1.9 2.1 2.6V16" />
+                </svg>
+              </span>
+              <span class="link__text">
+                <span class="link__platform">LinkedIn</span>
+                <span class="link__handle">Philipp Kreiser</span>
               </span>
             </a>
           </li>
@@ -545,6 +656,20 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Mobile menu: on small screens the nav opens as a dropdown; without JS it shows as a row.
+      const topbar = document.querySelector(".topbar");
+      const menuButton = topbar.querySelector(".topbar__menu");
+      const setMenu = (open) => {
+        topbar.classList.toggle("is-open", open);
+        menuButton.setAttribute("aria-expanded", open);
+      };
+      topbar.classList.add("topbar--js");
+      menuButton.hidden = false;
+      menuButton.addEventListener("click", () => setMenu(!topbar.classList.contains("is-open")));
+      topbar.querySelectorAll("nav a").forEach((link) => link.addEventListener("click", () => setMenu(false)));
+      document.addEventListener("keydown", (event) => event.key === "Escape" && setMenu(false));
+      document.addEventListener("click", (event) => !topbar.contains(event.target) && setMenu(false));
 
       // Open project images in a lightbox; without JS the links open the full image.
       const lightbox = document.getElementById("lightbox");

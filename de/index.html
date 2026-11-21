@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PrintedForFun — 3D-Scanning, Reverse Engineering &amp; 3D-Druck</title>
+    <meta
+      name="description"
+      content="PrintedForFun von Philipp Kreiser, München: 3D-Scanning von Platinen bis zu Autos und Gebäuden, vor Ort in Bayern und Österreich. Reverse Engineering bis zum STEP-Modell, Automatisierung von Scan-Workflows, 3D-Druck, Gaussian Splatting und Beratung."
+    />
+    <link rel="canonical" href="https://printedforfun.com/de/" />
+    <link rel="alternate" hreflang="en" href="https://printedforfun.com/" />
+    <link rel="alternate" hreflang="de" href="https://printedforfun.com/de/" />
+    <link rel="alternate" hreflang="x-default" href="https://printedforfun.com/" />
+    <meta name="theme-color" content="#16242c" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icon-180.png" />
+    <link rel="manifest" href="../site.webmanifest" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="PrintedForFun" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:url" content="https://printedforfun.com/de/" />
+    <meta property="og:title" content="PrintedForFun — 3D-Scanning, Reverse Engineering &amp; 3D-Druck" />
+    <meta property="og:description" content="Vom realen Objekt zum fertigen Bauteil: gescannt, konstruiert und gedruckt." />
+    <meta property="og:image" content="https://printedforfun.com/assets/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "PrintedForFun",
+        "url": "https://printedforfun.com/de/",
+        "logo": "https://printedforfun.com/assets/icon-512.png",
+        "image": "https://printedforfun.com/assets/og-image.jpg",
+        "email": "contact@printedforfun.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "München", "addressCountry": "DE" },
+        "areaServed": [
+          { "@type": "State", "name": "Bayern" },
+          { "@type": "Country", "name": "Österreich" }
+        ],
+        "founder": { "@type": "Person", "name": "Philipp Kreiser" },
+        "knowsAbout": ["3D-Scanning", "Reverse Engineering", "Workflow-Automatisierung", "3D-Druck", "Gaussian Splatting", "LiDAR-Scanning"],
+        "sameAs": [
+          "https://www.linkedin.com/in/philipp-kreiser-12398233a/",
+          "https://www.youtube.com/@PrintedForFun",
+          "https://www.reddit.com/user/PrintedForFun/",
+          "https://www.facebook.com/philipp.kreiser"
+        ]
+      }
+    </script>
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body>
+    <header class="topbar label">
+      <a href="./">PFF</a>
+      <div class="topbar__end">
+        <nav id="site-nav" aria-label="Bereiche">
+          <a href="#services">Leistungen</a>
+          <a href="#process">Zusammenarbeit</a>
+          <a href="#projects">Projekte</a>
+          <a href="#contact">Kontakt</a>
+        </nav>
+        <a class="topbar__lang" href="../" hreflang="en" lang="en" aria-label="English version">EN</a>
+        <button class="topbar__menu" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+          Menü
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <img class="hero__logo" src="../assets/logo.png" width="482" height="481" alt="PrintedForFun Logo" />
+
+        <h1 class="hero__title">Printed<span>For</span>Fun</h1>
+        <p class="hero__services label">3D-Scanning · Reverse Engineering · 3D-Druck</p>
+        <p class="hero__claim">Vom realen Objekt zum fertigen Bauteil: gescannt, konstruiert und gedruckt.</p>
+        <p class="hero__area label">Mit Sitz in München</p>
+
+        <div class="hero__actions">
+          <a class="button button--primary button--lg" href="#contact">Angebot anfragen</a>
+          <a class="button button--lg" href="#projects">Projekte ansehen</a>
+        </div>
+      </section>
+
+      <section id="services" class="section" aria-labelledby="services-title">
+        <div class="section__head">
+          <p class="label"><span>01</span> / Leistungen</p>
+          <h2 id="services-title" class="section__title">Was ich mache</h2>
+          <p class="section__lead">
+            Ich begleite Ihr Projekt vom ersten Scan bis zum fertigen Bauteil, alles aus einer Hand.
+          </p>
+        </div>
+
+        <div class="about">
+          <figure class="about__photo card">
+            <img
+              src="../assets/work/scanning-rear-wing-800.jpg"
+              srcset="../assets/work/scanning-rear-wing-800.jpg 800w, ../assets/work/scanning-rear-wing.jpg 972w"
+              sizes="(max-width: 720px) 100vw, 40vw"
+              width="800"
+              height="846"
+              loading="lazy"
+              alt="Scannen eines großen Heckflügels mit einem Hand-3D-Scanner"
+            />
+          </figure>
+          <div class="about__text card">
+            <p class="about__stat">7+</p>
+            <h3>Jahre Erfahrung mit 3D-Druck und 3D-Scanning</h3>
+            <p>
+              Ich bin Philipp Kreiser und betreibe PrintedForFun in München. Ob einzelnes Bauteil,
+              komplettes Bodykit oder ganzes Gebäude: Ich verbinde präzise 3D-Daten mit praxisnaher
+              Konstruktion, und am Ende steht ein echtes Ergebnis, das Sie in der Hand halten können.
+            </p>
+          </div>
+        </div>
+
+        <ul class="services">
+          <li class="service card">
+            <span class="service__num">01</span>
+            <h3>3D-Scanning</h3>
+            <p>Objekte jeder Größe, von kleinen Platinen über komplette Autos bis hin zu ganzen Gebäuden, die ich mit LiDAR erfasse.</p>
+          </li>
+          <li class="service card">
+            <span class="service__num">02</span>
+            <h3>Reverse Engineering &amp; Konstruktion</h3>
+            <p>
+              Ich mache aus Scans Daten, mit denen Sie weiterarbeiten können: aufbereitete Netze für die
+              weitere Konstruktion oder vollständige STEP-Modelle. Neue Bauteile entstehen direkt auf
+              dem Scan, klassisch per Reverse Engineering oder als Freiformflächen.
+            </p>
+          </li>
+          <li class="service card">
+            <span class="service__num">03</span>
+            <h3>Workflow-Automatisierung</h3>
+            <p>
+              Ich automatisiere den Scan-Workflow von der Erfassung über die Aufbereitung bis zum
+              fertigen Modell. So entstehen Ergebnisse schneller und reproduzierbar.
+            </p>
+          </li>
+          <li class="service card">
+            <span class="service__num">04</span>
+            <h3>3D-Druck</h3>
+            <p>Prototypen und Funktionsteile, im eigenen Haus gedruckt mit FDM und SLA in technischen Materialien.</p>
+          </li>
+          <li class="service card">
+            <span class="service__num">05</span>
+            <h3>Gaussian Splatting</h3>
+            <p>Gaussian Splats aus LiDAR-Scans für virtuelle Ortsbegehungen: Sie erkunden einen Ort, ohne hinfahren zu müssen.</p>
+          </li>
+          <li class="service card">
+            <span class="service__num">06</span>
+            <h3>Beratung</h3>
+            <p>Beratung zu 3D-Scanning, Reverse Engineering und 3D-Druck, für ein einzelnes Projekt oder Ihr ganzes Team.</p>
+          </li>
+          <li class="service service--wide card">
+            <span class="service__num">07</span>
+            <h3>Content &amp; Scanner-Tests</h3>
+            <p>
+              Videos und Beiträge zu all diesen Themen, darunter Praxistests von 3D-Scannern auf
+              <a href="https://www.youtube.com/@PrintedForFun" target="_blank" rel="noopener noreferrer">YouTube</a>.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="process" class="section" aria-labelledby="process-title">
+        <div class="section__head">
+          <p class="label"><span>02</span> / Zusammenarbeit</p>
+          <h2 id="process-title" class="section__title">So laufen Projekte ab</h2>
+          <p class="section__lead">
+            Jedes Projekt plane ich individuell, die Details stimmen wir direkt miteinander ab. Hier
+            sehen Sie, womit Sie rechnen können.
+          </p>
+        </div>
+
+        <ul class="process">
+          <li class="service card">
+            <span class="service__num">Standort</span>
+            <h3>Vor Ort oder per Versand</h3>
+            <ul class="checklist">
+              <li>Ich scanne vor Ort in ganz Bayern und Österreich</li>
+              <li>Größere Projekte sind nach Absprache auch weiter entfernt möglich</li>
+              <li>Alternativ schicken Sie mir Ihre Bauteile zum Scannen</li>
+              <li>Reverse Engineering geht ortsunabhängig, wenn bereits Scandaten vorhanden sind</li>
+            </ul>
+          </li>
+          <li class="service card">
+            <span class="service__num">Dauer &amp; Kosten</span>
+            <h3>Typisches Projekt</h3>
+            <dl class="facts">
+              <div><dt>Scanning</dt><dd>~1 Woche</dd></div>
+              <div><dt>Reverse Engineering</dt><dd>~2 Wochen</dd></div>
+              <div><dt>Stundensatz</dt><dd>150–200&nbsp;€</dd></div>
+            </dl>
+            <p>
+              Es eilt? Nach Absprache geht es oft schneller, je nach aktueller Auslastung. Der genaue
+              Stundensatz hängt von der Art der Arbeit ab.
+            </p>
+          </li>
+          <li class="service card">
+            <span class="service__num">Ausstattung</span>
+            <h3>Scanner-Flotte</h3>
+            <dl class="fleet">
+              <dt>EinScan Trak</dt>
+              <dd>Erfasst große Objekte wie komplette Fahrzeuge mithilfe eines optischen Trackers</dd>
+              <dt>EinScan Rigil</dt>
+              <dd>Handscanner mit Laser und Infrarot für Bauteile, Innenräume und enge Stellen</dd>
+              <dt>SHARE C1</dt>
+              <dd>LiDAR-Scanner für Gebäude, Räume und Außenbereiche</dd>
+            </dl>
+            <p>Dazu weitere Scanner für kleine, sehr detailreiche Bauteile.</p>
+          </li>
+          <li class="service card">
+            <span class="service__num">Ergebnisse</span>
+            <h3>Was Sie erhalten</h3>
+            <ul class="checklist">
+              <li>3D-Rohdaten</li>
+              <li>Aufbereitete Scans, bereinigt und an einem Koordinatensystem ausgerichtet</li>
+              <li>Teilweises Reverse Engineering, z.&nbsp;B. nur Befestigungspunkte und Schnittstellen</li>
+              <li>Vollständig rückkonstruierte CAD-Modelle als STEP</li>
+              <li>Fertige 3D-Druckteile</li>
+            </ul>
+          </li>
+          <li class="service service--wide card">
+            <span class="service__num">3D-Druck</span>
+            <h3>FDM- und SLA-Druck im eigenen Haus</h3>
+            <p>
+              Ich drucke direkt in meiner Werkstatt, in vielen verschiedenen Materialien. Für weitere
+              Druckverfahren arbeite ich mit externen Partnern zusammen.
+            </p>
+            <ul class="tags tags--materials" aria-label="FDM-Materialien">
+              <li>PLA</li>
+              <li>PETG</li>
+              <li>ABS</li>
+              <li>ASA</li>
+              <li>PC</li>
+              <li>Nylon</li>
+              <li>TPU</li>
+              <li>SLA-Harz</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section id="projects" class="section" aria-labelledby="projects-title">
+        <div class="section__head">
+          <p class="label"><span>03</span> / Projekte</p>
+          <h2 id="projects-title" class="section__title">Ausgewählte Arbeiten</h2>
+          <p class="section__lead">
+            Ein Blick auf aktuelle Projekte: von historischen Zierleisten über Autoteile in
+            Originalgröße bis zur feinen Pinzette.
+          </p>
+        </div>
+
+        <article class="project">
+          <div class="project__head">
+            <h3>Historische Zierleisten</h3>
+            <p>
+              Die ornamentierten Zierleisten eines historischen Gebäudes mussten neu gefertigt werden.
+              Für eine Reparatur oder eine einfache Kopie waren die Originale zu stark beschädigt.
+              Deshalb wurden die Leisten anhand von 3D-Scans vollständig als saubere CAD-Modelle für die
+              CNC-Fräsung rückkonstruiert.
+            </p>
+          </div>
+          <ul class="tags">
+            <li>3D-Scanning</li>
+            <li>Reverse Engineering</li>
+            <li>Abweichungsanalyse</li>
+            <li>CNC-Fräsen</li>
+            <li>Denkmalpflege</li>
+          </ul>
+          <ol class="workflow">
+            <li class="step card">
+              <figure class="shot">
+                <a href="../assets/work/historic-trim-original.jpg">
+                  <img src="../assets/work/historic-trim-original-800.jpg" width="800" height="1422" loading="lazy" alt="Originale ornamentierte Metallleiste mit starker Korrosion und abplatzender Farbe" />
+                </a>
+                <figcaption>Beschädigtes Original</figcaption>
+              </figure>
+              <div class="step__body">
+                <span class="service__num">01</span>
+                <p>Korrosion und abplatzende Farbe hatten große Teile des Ornaments zerstört. Zeichnungen gab es keine.</p>
+              </div>
+            </li>
+            <li class="step card">
+              <figure class="shot">
+                <a href="../assets/work/historic-trim-scan.jpg">
+                  <img src="../assets/work/historic-trim-scan-800.jpg" width="800" height="783" loading="lazy" alt="3D-Scan-Netz eines Leistenabschnitts mit Blattornament, Dellen und Löchern" />
+                </a>
+                <figcaption>3D-Scan</figcaption>
+              </figure>
+              <div class="step__body">
+                <span class="service__num">02</span>
+                <p>Die am besten erhaltenen Abschnitte wurden gescannt. Das Netz erfasst das Ornament, aber auch jede Delle und jede Fehlstelle.</p>
+              </div>
+            </li>
+            <li class="step card">
+              <figure class="shot">
+                <a href="../assets/work/historic-trim-deviation.jpg">
+                  <img src="../assets/work/historic-trim-deviation-800.jpg" width="800" height="835" loading="lazy" alt="Farbkarte zum Vergleich der neu aufgebauten CAD-Flächen mit dem Scan bei einer Toleranz von plus/minus 0,5 mm" />
+                </a>
+                <figcaption>Neuaufbau &amp; Abweichungsprüfung</figcaption>
+              </figure>
+              <div class="step__body">
+                <span class="service__num">03</span>
+                <p>Eine sich wiederholende Einheit wurde als saubere CAD-Fläche auf dem Scan neu aufgebaut und mit ±0,5&nbsp;mm gegen ihn geprüft.</p>
+              </div>
+            </li>
+            <li class="step card">
+              <figure class="shot">
+                <a href="../assets/work/historic-trim-pattern.jpg">
+                  <img src="../assets/work/historic-trim-pattern-800.jpg" width="800" height="517" loading="lazy" alt="Vollständiges CAD-Modell der Leiste mit über die Länge wiederholtem Blattornament" />
+                </a>
+                <figcaption>CAD-Modell in voller Länge</figcaption>
+              </figure>
+              <div class="step__body">
+                <span class="service__num">04</span>
+                <p>Die geprüfte Einheit wurde entlang des Profils zu einem vollständigen Modell der ganzen Leiste gemustert.</p>
+              </div>
+            </li>
+            <li class="step card">
+              <figure class="shot">
+                <a href="../assets/work/historic-trim-milling.jpg">
+                  <img src="../assets/work/historic-trim-milling-800.jpg" width="800" height="738" loading="lazy" alt="Volumenmodell des Leistenornaments, in Fusion für die CNC-Fräsung vorbereitet" />
+                </a>
+                <figcaption>Bereit zum Fräsen</figcaption>
+              </figure>
+              <div class="step__body">
+                <span class="service__num">05</span>
+                <p>Der finale Volumenkörper wurde in Fusion für die CNC-Fräsung vorbereitet, damit die neuen Leisten den Originalen entsprechen.</p>
+              </div>
+            </li>
+          </ol>
+        </article>
+
+        <article class="project">
+          <div class="project__head">
+            <h3>Porsche-Bodykit</h3>
+            <p>
+              Ein komplettes Bodykit: Das Auto wurde 3D-gescannt, die neuen Verkleidungsteile direkt auf
+              dem Scan als Freiformflächen konstruiert und auf Abweichungen geprüft. Anschließend wurden
+              sie in Originalgröße gedruckt und am Fahrzeug montiert.
+            </p>
+          </div>
+          <ul class="tags">
+            <li>3D-Scanning</li>
+            <li>Freiformmodellierung</li>
+            <li>Abweichungsanalyse</li>
+            <li>Großformatiger 3D-Druck</li>
+          </ul>
+          <div class="gallery gallery--featured">
+            <figure class="shot">
+              <a href="../assets/work/porsche-bodykit-rear-cad.jpg">
+                <img src="../assets/work/porsche-bodykit-rear-cad-800.jpg" srcset="../assets/work/porsche-bodykit-rear-cad-800.jpg 800w, ../assets/work/porsche-bodykit-rear-cad.jpg 1600w" sizes="(max-width: 600px) 100vw, 66vw" width="800" height="478" loading="lazy" alt="Flächenmodell des kompletten Porsche-Bodykits, Ansicht von hinten" />
+              </a>
+              <figcaption>Komplettes Bodykit, Flächenmodell</figcaption>
+            </figure>
+            <figure class="shot shot--tall">
+              <a href="../assets/work/porsche-bodykit-rear-installed.jpg">
+                <img src="../assets/work/porsche-bodykit-rear-installed-800.jpg" width="800" height="1067" loading="lazy" alt="Heckansicht des Porsche mit montiertem gedrucktem Bodykit" />
+              </a>
+              <figcaption>Am Fahrzeug montiert</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="../assets/work/porsche-bodykit-front-cad.jpg">
+                <img src="../assets/work/porsche-bodykit-front-cad-800.jpg" width="800" height="507" loading="lazy" alt="Neue Frontschürze, auf dem Fahrzeugscan modelliert" />
+              </a>
+              <figcaption>Frontschürze auf dem Scan</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="../assets/work/porsche-bodykit-fender-cad.jpg">
+                <img src="../assets/work/porsche-bodykit-fender-cad-800.jpg" width="800" height="700" loading="lazy" alt="Vorderer Kotflügel, als Freiformflächen auf dem Scan konstruiert" />
+              </a>
+              <figcaption>Vorderer Kotflügel, Freiformflächen</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="../assets/work/porsche-intercooler-packaging.jpg">
+                <img src="../assets/work/porsche-intercooler-packaging-800.jpg" width="800" height="599" loading="lazy" alt="Bauraumprüfung des Ladeluftkühlers im gescannten Heck des Fahrzeugs" />
+              </a>
+              <figcaption>Bauraum Ladeluftkühler im Scan</figcaption>
+            </figure>
+            <figure class="shot shot--wide">
+              <a href="../assets/work/porsche-scan-deviation.jpg">
+                <img src="../assets/work/porsche-scan-deviation-800.jpg" width="800" height="524" loading="lazy" alt="Farbkarte der Abweichung zwischen CAD-Flächen und Scan" />
+              </a>
+              <figcaption>Abweichungsprüfung gegen den Scan</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="../assets/work/porsche-bodykit-rear-printed.jpg">
+                <img src="../assets/work/porsche-bodykit-rear-printed-800.jpg" width="800" height="694" loading="lazy" alt="3D-gedrucktes Heckteil in Originalgröße mit Flügel und Rückleuchte" />
+              </a>
+              <figcaption>Gedrucktes Heckteil</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project__head">
+            <h3>Teile für eine Renn-Vespa</h3>
+            <p>
+              Die originale Lenkkopfabdeckung wurde direkt am Roller gescannt und in QuickSurface als
+              sauberes CAD-Modell neu aufgebaut, passend zu den umliegenden Teilen. Die fertige
+              Abdeckung ist inzwischen am Roller montiert.
+            </p>
+          </div>
+          <ul class="tags">
+            <li>3D-Scanning</li>
+            <li>Reverse Engineering</li>
+            <li>CAD</li>
+            <li>Passungsprüfung</li>
+          </ul>
+          <div class="gallery gallery--featured">
+            <figure class="shot">
+              <a href="../assets/work/vespa-cover-installed.jpg">
+                <img src="../assets/work/vespa-cover-installed-800.jpg" srcset="../assets/work/vespa-cover-installed-800.jpg 800w, ../assets/work/vespa-cover-installed.jpg 1600w" sizes="(max-width: 600px) 100vw, 66vw" width="800" height="600" loading="lazy" alt="Fertige, lackierte Lenkkopfabdeckung mit Scheinwerfer an der Renn-Vespa" />
+              </a>
+              <figcaption>Fertige Abdeckung am Roller</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="../assets/work/vespa-scan-process.jpg">
+                <img src="../assets/work/vespa-scan-process-800.jpg" width="800" height="1067" loading="lazy" alt="Scannen der Vespa-Front mit einem Hand-3D-Scanner und Referenzmarkern" />
+              </a>
+              <figcaption>Scannen am Roller</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="../assets/work/vespa-headset-scan.jpg">
+                <img src="../assets/work/vespa-headset-scan-800.jpg" width="800" height="757" loading="lazy" alt="3D-Scan der originalen Vespa-Lenkkopfabdeckung am Roller" />
+              </a>
+              <figcaption>Originale Lenkkopfabdeckung, gescannt</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="../assets/work/vespa-headset-cad.jpg">
+                <img src="../assets/work/vespa-headset-cad-800.jpg" width="800" height="803" loading="lazy" alt="Rückkonstruiertes CAD-Modell der Vespa-Lenkkopfabdeckung" />
+              </a>
+              <figcaption>Rückkonstruiertes CAD-Modell</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="../assets/work/vespa-cover-quicksurface.jpg">
+                <img src="../assets/work/vespa-cover-quicksurface-800.jpg" width="800" height="600" loading="lazy" alt="Neue Lenkkopfabdeckung auf dem vollständigen Scan der Vespa in QuickSurface" />
+              </a>
+              <figcaption>Passungsprüfung am kompletten Roller-Scan</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="../assets/work/vespa-cover-installed-back.jpg">
+                <img src="../assets/work/vespa-cover-installed-back-800.jpg" width="800" height="600" loading="lazy" alt="Rückansicht der montierten Lenkkopfabdeckung mit Armaturen und Lenkerbedienelementen" />
+              </a>
+              <figcaption>Montierte Abdeckung, Fahrersicht</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project__head">
+            <h3>VW T-Roc Cabriolet, innen und außen</h3>
+            <p>
+              Ein kompletter Fahrzeugscan mit zwei Scannern: Die Außenhaut wurde mit dem EinScan Trak
+              von vier Tracker-Positionen erfasst, mit offenem und geschlossenem Dach, der Innenraum mit
+              dem EinScan Rigil. Alle Scans wurden ausgerichtet und zu einem Modell kombiniert.
+            </p>
+          </div>
+          <ul class="tags">
+            <li>3D-Scanning</li>
+            <li>Multi-Scanner-Workflow</li>
+            <li>Scan-Ausrichtung</li>
+            <li>Automotive</li>
+          </ul>
+          <div class="gallery gallery--featured">
+            <figure class="shot">
+              <a href="../assets/work/troc-merged-rear.jpg">
+                <img src="../assets/work/troc-merged-rear-800.jpg" srcset="../assets/work/troc-merged-rear-800.jpg 800w, ../assets/work/troc-merged-rear.jpg 1600w" sizes="(max-width: 600px) 100vw, 66vw" width="800" height="688" loading="lazy" alt="Kombinierter 3D-Scan des VW T-Roc Cabriolet mit offenem Dach, mit Außenhaut und komplettem Innenraum" />
+              </a>
+              <figcaption>Kombiniertes Modell, Dach offen</figcaption>
+            </figure>
+            <figure class="shot shot--contain">
+              <a href="../assets/work/troc-scan-setup.jpg">
+                <img src="../assets/work/troc-scan-setup-800.jpg" width="800" height="833" loading="lazy" alt="Draufsicht auf das Fahrzeug mit den vier Tracker-Positionen und ihren Sichtfeldern" />
+              </a>
+              <figcaption>Vier Tracker-Positionen</figcaption>
+            </figure>
+            <figure class="shot shot--contain">
+              <a href="../assets/work/troc-scan-alignment.jpg">
+                <img src="../assets/work/troc-scan-alignment-800.jpg" width="800" height="598" loading="lazy" alt="Einzelne Trak-Außenscans und Rigil-Innenraumscan vor dem Kombinieren" />
+              </a>
+              <figcaption>Trak- und Rigil-Scans vor dem Kombinieren</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="../assets/work/troc-interior-rigil.jpg">
+                <img src="../assets/work/troc-interior-rigil-800.jpg" width="800" height="660" loading="lazy" alt="Farbiger 3D-Scan des Innenraums, erfasst mit dem EinScan Rigil" />
+              </a>
+              <figcaption>Innenraum in Farbe, EinScan Rigil</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="../assets/work/car-scan-convertible.jpg">
+                <img src="../assets/work/car-scan-convertible-800.jpg" width="800" height="709" loading="lazy" alt="Kombinierter 3D-Scan des T-Roc Cabriolet mit offenem Dach, Frontansicht" />
+              </a>
+              <figcaption>Dach offen, Frontansicht</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="../assets/work/troc-roof-closed.jpg">
+                <img src="../assets/work/troc-roof-closed-800.jpg" width="800" height="790" loading="lazy" alt="3D-Scan des T-Roc Cabriolet mit geschlossenem Dach" />
+              </a>
+              <figcaption>Dach geschlossen</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project__head">
+            <h3>Klein &amp; detailreich</h3>
+            <p>Details zählen in jeder Größe: Platinen, Kühlkörper und sogar feine Pinzetten.</p>
+          </div>
+          <ul class="tags">
+            <li>Hochauflösendes Scanning</li>
+            <li>Elektronik</li>
+          </ul>
+          <div class="gallery">
+            <figure class="shot">
+              <a href="../assets/work/pcb-scan.jpg">
+                <img src="../assets/work/pcb-scan-800.jpg" width="800" height="763" loading="lazy" alt="Hochauflösender 3D-Scan einer Platine mit einzelnen Bauteilen" />
+              </a>
+              <figcaption>Platine</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="../assets/work/pcb-heatsink-scan.jpg">
+                <img src="../assets/work/pcb-heatsink-scan-800.jpg" width="800" height="821" loading="lazy" alt="3D-Scan einer Platine mit montiertem Kühlkörper" />
+              </a>
+              <figcaption>Platine mit Kühlkörper</figcaption>
+            </figure>
+            <figure class="shot shot--contain">
+              <a href="../assets/work/tweezers-scan.jpg">
+                <img src="../assets/work/tweezers-scan-800.jpg" width="800" height="1087" loading="lazy" alt="3D-Scan einer feinen Pinzette" />
+              </a>
+              <figcaption>Pinzette</figcaption>
+            </figure>
+          </div>
+        </article>
+      </section>
+
+      <section id="contact" class="section" aria-labelledby="contact-title">
+        <div class="section__head">
+          <p class="label"><span>04</span> / Kontakt</p>
+          <h2 id="contact-title" class="section__title">Packen wir es an</h2>
+        </div>
+
+        <div class="contact__cta card">
+          <p>
+            <strong>Sie haben ein Projekt im Kopf?</strong>
+            Schicken Sie mir eine kurze Beschreibung und ein paar Fotos. Ich melde mich mit Optionen
+            und einem Angebot, die Details planen wir dann gemeinsam.
+          </p>
+          <a
+            class="button button--primary button--lg"
+            href="mailto:contact@printedforfun.com?subject=Projektanfrage%20%E2%80%93%20PrintedForFun&amp;body=Hallo%20Philipp%2C%0D%0A%0D%0AProjekt%3A%20%0D%0AGr%C3%B6%C3%9Fe%20%2F%20Abmessungen%3A%20%0D%0AWas%20ich%20brauche%20(Scanning%20%2F%20Reverse%20Engineering%20%2F%20Druck%20%2F%20Beratung)%3A%20%0D%0AOrt%20(vor%20Ort%20oder%20per%20Versand)%3A%20%0D%0AZeitrahmen%3A%20%0D%0A"
+            >Angebot anfragen</a
+          >
+        </div>
+
+        <ul class="links">
+          <li>
+            <a class="link" href="mailto:contact@printedforfun.com">
+              <span class="link__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="5" width="18" height="14" rx="2.5" />
+                  <path d="m4 7 8 6 8-6" />
+                </svg>
+              </span>
+              <span class="link__text">
+                <span class="link__platform">E-Mail</span>
+                <span class="link__handle">contact@printedforfun.com</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="link" href="https://www.linkedin.com/in/philipp-kreiser-12398233a/" target="_blank" rel="noopener noreferrer">
+              <span class="link__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="3" />
+                  <path d="M8 10.5V16M8 7.6v.1M11.5 16v-5.5M11.5 13c0-1.6 1-2.6 2.4-2.6 1.4 0 2.1.9 2.1 2.6V16" />
+                </svg>
+              </span>
+              <span class="link__text">
+                <span class="link__platform">LinkedIn</span>
+                <span class="link__handle">Philipp Kreiser</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="link" href="https://www.youtube.com/@PrintedForFun" target="_blank" rel="noopener noreferrer">
+              <span class="link__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round">
+                  <rect x="2.5" y="5.5" width="19" height="13" rx="4" />
+                  <path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor" />
+                </svg>
+              </span>
+              <span class="link__text">
+                <span class="link__platform">YouTube</span>
+                <span class="link__handle">@PrintedForFun</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="link" href="https://www.reddit.com/user/PrintedForFun/" target="_blank" rel="noopener noreferrer">
+              <span class="link__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="12" cy="14.5" rx="7.5" ry="5" />
+                  <circle cx="18.5" cy="4.5" r="1.6" />
+                  <path d="M12 9.5 13.2 4l3.7.6" />
+                  <circle cx="4.6" cy="10.6" r="1.7" />
+                  <circle cx="19.4" cy="10.6" r="1.7" />
+                  <circle cx="9.3" cy="13.6" r="0.6" fill="currentColor" />
+                  <circle cx="14.7" cy="13.6" r="0.6" fill="currentColor" />
+                  <path d="M9.4 16.6c1.5 1 3.7 1 5.2 0" />
+                </svg>
+              </span>
+              <span class="link__text">
+                <span class="link__platform">Reddit</span>
+                <span class="link__handle">u/PrintedForFun</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="link" href="https://www.facebook.com/philipp.kreiser" target="_blank" rel="noopener noreferrer">
+              <span class="link__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="9.5" />
+                  <path d="M13 21.4V12h3M10 12h3M13 12V9.6c0-1.3.8-2.1 2.1-2.1h1.4" />
+                </svg>
+              </span>
+              <span class="link__text">
+                <span class="link__platform">Facebook</span>
+                <span class="link__handle">@philipp.kreiser</span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© <span id="year">2026</span> PrintedForFun · Philipp Kreiser</span>
+      <nav aria-label="Rechtliches">
+        <a class="button" href="../impressum.html">Impressum</a>
+        <a class="button" href="../privacy.html">Datenschutz</a>
+      </nav>
+    </footer>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Bildvorschau">
+      <img alt="" />
+      <div class="lightbox__bar">
+        <span class="lightbox__caption"></span>
+        <button class="lightbox__close" type="button">Schließen</button>
+      </div>
+    </dialog>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Mobiles Menü: auf kleinen Bildschirmen als Dropdown; ohne JS als Zeile sichtbar.
+      const topbar = document.querySelector(".topbar");
+      const menuButton = topbar.querySelector(".topbar__menu");
+      const setMenu = (open) => {
+        topbar.classList.toggle("is-open", open);
+        menuButton.setAttribute("aria-expanded", open);
+      };
+      topbar.classList.add("topbar--js");
+      menuButton.hidden = false;
+      menuButton.addEventListener("click", () => setMenu(!topbar.classList.contains("is-open")));
+      topbar.querySelectorAll("nav a").forEach((link) => link.addEventListener("click", () => setMenu(false)));
+      document.addEventListener("keydown", (event) => event.key === "Escape" && setMenu(false));
+      document.addEventListener("click", (event) => !topbar.contains(event.target) && setMenu(false));
+
+      // Projektbilder in einer Lightbox öffnen; ohne JS öffnen die Links das Bild direkt.
+      const lightbox = document.getElementById("lightbox");
+      if (typeof lightbox.showModal === "function") {
+        const lbImg = lightbox.querySelector("img");
+        const lbCaption = lightbox.querySelector(".lightbox__caption");
+
+        document.querySelectorAll(".shot a").forEach((link) => {
+          link.addEventListener("click", (event) => {
+            event.preventDefault();
+            const thumb = link.querySelector("img");
+            lbImg.src = link.href;
+            lbImg.alt = thumb.alt;
+            lbCaption.textContent = link.parentElement.querySelector("figcaption")?.textContent ?? "";
+            lightbox.showModal();
+          });
+        });
+
+        lightbox.querySelector(".lightbox__close").addEventListener("click", () => lightbox.close());
+        lightbox.addEventListener("click", (event) => {
+          if (event.target === lightbox) lightbox.close();
+        });
+      }
+    </script>
+  </body>
+</html>
