@@ -155,15 +155,97 @@
         <div class="section__head">
           <p class="label"><span>02</span> / Projects</p>
           <h2 id="projects-title" class="section__title">Selected work</h2>
-          <p class="section__lead">A look at recent projects, from full-size car parts down to tiny tweezers.</p>
+          <p class="section__lead">
+            A look at recent projects, from historic building trims and full-size car parts down to tiny tweezers.
+          </p>
         </div>
+
+        <article class="project">
+          <div class="project__head">
+            <h3>Historic building trims</h3>
+            <p>
+              Ornamental trims from a historic building had to be remanufactured. The damage was too severe
+              to copy or repair the originals, so the trims were fully reverse engineered from 3D scans
+              into clean CAD models ready for CNC milling.
+            </p>
+          </div>
+          <ul class="tags">
+            <li>3D scanning</li>
+            <li>Reverse engineering</li>
+            <li>Deviation analysis</li>
+            <li>CNC milling</li>
+            <li>Heritage restoration</li>
+          </ul>
+          <ol class="workflow">
+            <li class="step card">
+              <figure class="shot">
+                <a href="assets/work/historic-trim-original.jpg">
+                  <img src="assets/work/historic-trim-original-800.jpg" width="800" height="1422" loading="lazy" alt="Original ornamental metal trim with heavy corrosion and flaking paint" />
+                </a>
+                <figcaption>Damaged original</figcaption>
+              </figure>
+              <div class="step__body">
+                <span class="service__num">01</span>
+                <p>Corrosion and flaking paint had destroyed large parts of the ornament. No drawings existed.</p>
+              </div>
+            </li>
+            <li class="step card">
+              <figure class="shot">
+                <a href="assets/work/historic-trim-scan.jpg">
+                  <img src="assets/work/historic-trim-scan-800.jpg" width="800" height="783" loading="lazy" alt="3D scan mesh of a trim section showing the leaf ornament, dents and holes" />
+                </a>
+                <figcaption>3D scan</figcaption>
+              </figure>
+              <div class="step__body">
+                <span class="service__num">02</span>
+                <p>The best-preserved sections were 3D scanned. The mesh captures the ornament, but also every dent and missing area.</p>
+              </div>
+            </li>
+            <li class="step card">
+              <figure class="shot">
+                <a href="assets/work/historic-trim-deviation.jpg">
+                  <img src="assets/work/historic-trim-deviation-800.jpg" width="800" height="835" loading="lazy" alt="Colour map comparing the rebuilt CAD surfaces with the scan at a tolerance of plus or minus 0.5 mm" />
+                </a>
+                <figcaption>Rebuild &amp; deviation check</figcaption>
+              </figure>
+              <div class="step__body">
+                <span class="service__num">03</span>
+                <p>One repeating unit was rebuilt as clean CAD surfaces on the scan and checked against it within ±0.5&nbsp;mm.</p>
+              </div>
+            </li>
+            <li class="step card">
+              <figure class="shot">
+                <a href="assets/work/historic-trim-pattern.jpg">
+                  <img src="assets/work/historic-trim-pattern-800.jpg" width="800" height="517" loading="lazy" alt="Complete CAD model of the trim with the leaf ornament repeated along its length" />
+                </a>
+                <figcaption>Full-length CAD model</figcaption>
+              </figure>
+              <div class="step__body">
+                <span class="service__num">04</span>
+                <p>The verified unit was patterned along the profile into a complete model of the full trim.</p>
+              </div>
+            </li>
+            <li class="step card">
+              <figure class="shot">
+                <a href="assets/work/historic-trim-milling.jpg">
+                  <img src="assets/work/historic-trim-milling-800.jpg" width="800" height="738" loading="lazy" alt="Solid model of the trim ornament prepared in Fusion for CNC milling" />
+                </a>
+                <figcaption>Ready for milling</figcaption>
+              </figure>
+              <div class="step__body">
+                <span class="service__num">05</span>
+                <p>The final solid was prepared in Fusion for CNC milling, so new trims match the originals.</p>
+              </div>
+            </li>
+          </ol>
+        </article>
 
         <article class="project">
           <div class="project__head">
             <h3>Porsche body kit</h3>
             <p>
               A complete body kit: the car was 3D scanned, new panels were designed as freeform surfaces
-              directly on the scan, checked for deviation and printed as full-size parts.
+              directly on the scan, checked for deviation, printed as full-size parts and fitted to the car.
             </p>
           </div>
           <ul class="tags">
@@ -178,6 +260,12 @@
                 <img src="assets/work/porsche-bodykit-rear-cad-800.jpg" srcset="assets/work/porsche-bodykit-rear-cad-800.jpg 800w, assets/work/porsche-bodykit-rear-cad.jpg 1600w" sizes="(max-width: 600px) 100vw, 66vw" width="800" height="478" loading="lazy" alt="Surface model of the complete Porsche body kit, rear view" />
               </a>
               <figcaption>Complete body kit, surface model</figcaption>
+            </figure>
+            <figure class="shot shot--tall">
+              <a href="assets/work/porsche-bodykit-rear-installed.jpg">
+                <img src="assets/work/porsche-bodykit-rear-installed-800.jpg" width="800" height="1067" loading="lazy" alt="Rear view of the Porsche with the printed body kit installed" />
+              </a>
+              <figcaption>Installed on the car</figcaption>
             </figure>
             <figure class="shot">
               <a href="assets/work/porsche-bodykit-front-cad.jpg">
@@ -197,7 +285,7 @@
               </a>
               <figcaption>Intercooler packaging in the scan</figcaption>
             </figure>
-            <figure class="shot">
+            <figure class="shot shot--wide">
               <a href="assets/work/porsche-scan-deviation.jpg">
                 <img src="assets/work/porsche-scan-deviation-800.jpg" width="800" height="524" loading="lazy" alt="Colour map showing deviation between CAD surfaces and scan" />
               </a>
@@ -216,16 +304,30 @@
           <div class="project__head">
             <h3>Race Vespa parts</h3>
             <p>
-              Parts for a race Vespa: the original headset cover was scanned on the scooter and rebuilt
-              as a clean CAD model that fits the surrounding parts.
+              Parts for a race Vespa: the original headset cover was 3D scanned directly on the scooter,
+              rebuilt as a clean CAD model in QuickSurface that fits the surrounding parts, and the
+              finished cover is now fitted to the bike.
             </p>
           </div>
           <ul class="tags">
             <li>3D scanning</li>
             <li>Reverse engineering</li>
             <li>CAD</li>
+            <li>Fit check</li>
           </ul>
-          <div class="gallery gallery--2">
+          <div class="gallery gallery--featured">
+            <figure class="shot">
+              <a href="assets/work/vespa-cover-installed.jpg">
+                <img src="assets/work/vespa-cover-installed-800.jpg" srcset="assets/work/vespa-cover-installed-800.jpg 800w, assets/work/vespa-cover-installed.jpg 1600w" sizes="(max-width: 600px) 100vw, 66vw" width="800" height="600" loading="lazy" alt="Finished, painted headset cover with headlight fitted to the race Vespa" />
+              </a>
+              <figcaption>Finished cover on the scooter</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="assets/work/vespa-scan-process.jpg">
+                <img src="assets/work/vespa-scan-process-800.jpg" width="800" height="1067" loading="lazy" alt="Scanning the front of the Vespa with a handheld 3D scanner and reference markers" />
+              </a>
+              <figcaption>Scanning on the scooter</figcaption>
+            </figure>
             <figure class="shot">
               <a href="assets/work/vespa-headset-scan.jpg">
                 <img src="assets/work/vespa-headset-scan-800.jpg" width="800" height="757" loading="lazy" alt="3D scan of the original Vespa headset cover on the scooter" />
@@ -238,30 +340,72 @@
               </a>
               <figcaption>Reverse-engineered CAD model</figcaption>
             </figure>
+            <figure class="shot">
+              <a href="assets/work/vespa-cover-quicksurface.jpg">
+                <img src="assets/work/vespa-cover-quicksurface-800.jpg" width="800" height="600" loading="lazy" alt="New headset cover shown on the full scan of the Vespa in QuickSurface" />
+              </a>
+              <figcaption>Fit check on the full scooter scan</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="assets/work/vespa-cover-installed-back.jpg">
+                <img src="assets/work/vespa-cover-installed-back-800.jpg" width="800" height="600" loading="lazy" alt="Rear view of the fitted headset cover with the dashboard and handlebar controls" />
+              </a>
+              <figcaption>Fitted cover, rider's view</figcaption>
+            </figure>
           </div>
         </article>
 
         <article class="project">
           <div class="project__head">
-            <h3>Full vehicle scans</h3>
-            <p>Complete vehicles captured inside and out, ready for measuring, design work or visualisation.</p>
+            <h3>VW T-Roc Cabriolet, inside and out</h3>
+            <p>
+              A complete vehicle scan from two scanners: the exterior was captured with the EinScan Trak
+              from four tracker positions, roof open and closed, and the interior with the EinScan Rigil.
+              All scans were aligned and combined into one model.
+            </p>
           </div>
           <ul class="tags">
             <li>3D scanning</li>
+            <li>Multi-scanner workflow</li>
+            <li>Scan alignment</li>
             <li>Automotive</li>
           </ul>
-          <div class="gallery gallery--2">
+          <div class="gallery gallery--featured">
             <figure class="shot">
-              <a href="assets/work/car-scan-convertible.jpg">
-                <img src="assets/work/car-scan-convertible-800.jpg" width="800" height="709" loading="lazy" alt="Full 3D scan of a convertible with the roof open, including interior" />
+              <a href="assets/work/troc-merged-rear.jpg">
+                <img src="assets/work/troc-merged-rear-800.jpg" srcset="assets/work/troc-merged-rear-800.jpg 800w, assets/work/troc-merged-rear.jpg 1600w" sizes="(max-width: 600px) 100vw, 66vw" width="800" height="688" loading="lazy" alt="Combined 3D scan of the VW T-Roc Cabriolet with roof open, showing exterior and full interior" />
               </a>
-              <figcaption>Convertible, roof open</figcaption>
+              <figcaption>Combined model, roof open</figcaption>
+            </figure>
+            <figure class="shot shot--contain">
+              <a href="assets/work/troc-scan-setup.jpg">
+                <img src="assets/work/troc-scan-setup-800.jpg" width="800" height="833" loading="lazy" alt="Top view of the car with the four tracker positions and their fields of view" />
+              </a>
+              <figcaption>Four tracker positions</figcaption>
+            </figure>
+            <figure class="shot shot--contain">
+              <a href="assets/work/troc-scan-alignment.jpg">
+                <img src="assets/work/troc-scan-alignment-800.jpg" width="800" height="598" loading="lazy" alt="Separate Trak exterior scans and Rigil interior scan before combining" />
+              </a>
+              <figcaption>Trak and Rigil scans before combining</figcaption>
             </figure>
             <figure class="shot">
-              <a href="assets/work/car-scan-suv.jpg">
-                <img src="assets/work/car-scan-suv-800.jpg" width="800" height="625" loading="lazy" alt="Full 3D scan of an SUV" />
+              <a href="assets/work/troc-interior-rigil.jpg">
+                <img src="assets/work/troc-interior-rigil-800.jpg" width="800" height="660" loading="lazy" alt="Colour 3D scan of the interior captured with the EinScan Rigil" />
               </a>
-              <figcaption>SUV, full exterior</figcaption>
+              <figcaption>Interior in colour, EinScan Rigil</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="assets/work/car-scan-convertible.jpg">
+                <img src="assets/work/car-scan-convertible-800.jpg" width="800" height="709" loading="lazy" alt="Combined 3D scan of the T-Roc Cabriolet with the roof open, front view" />
+              </a>
+              <figcaption>Roof open, front view</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="assets/work/troc-roof-closed.jpg">
+                <img src="assets/work/troc-roof-closed-800.jpg" width="800" height="790" loading="lazy" alt="3D scan of the T-Roc Cabriolet with the roof closed" />
+              </a>
+              <figcaption>Roof closed</figcaption>
             </figure>
           </div>
         </article>

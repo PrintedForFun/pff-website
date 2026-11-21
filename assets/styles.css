@@ -450,6 +450,62 @@ a:hover {
   pointer-events: none;
 }
 
+/* Wide-screen tile shapes: a tall tile beside the featured image and a
+   double-width tile, so galleries with 7 images still fill the grid. */
+@media (min-width: 901px) {
+  .shot--tall {
+    grid-row: span 2;
+  }
+
+  .shot--wide {
+    grid-column: span 2;
+  }
+
+  .shot--tall img,
+  .shot--wide img {
+    position: absolute;
+    inset: 0;
+    aspect-ratio: auto;
+  }
+
+  .shot--wide img {
+    object-fit: contain;
+  }
+}
+
+/* Step-by-step workflow (image + explanation per step) */
+
+.workflow {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.step .shot {
+  border: 0;
+  border-bottom: 1px solid var(--navy-600);
+  border-radius: 0;
+}
+
+.step__body {
+  padding: 14px 16px 16px;
+}
+
+.step__body p {
+  margin: 6px 0 0;
+  font-size: 0.875rem;
+  color: var(--grey-300);
+}
+
 /* ---------- Lightbox ---------- */
 
 .lightbox {
@@ -666,6 +722,24 @@ a:hover {
   .services,
   .gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .workflow {
+    grid-template-columns: 1fr;
+  }
+
+  .step {
+    flex-direction: row;
+  }
+
+  .step .shot {
+    flex: 0 0 40%;
+    border-bottom: 0;
+    border-right: 1px solid var(--navy-600);
+  }
+
+  .step__body {
+    align-self: center;
   }
 }
 
